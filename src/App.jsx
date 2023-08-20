@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom'
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Navbar from './components/Navbar/Navbar';
-import Home from './pages/Home';
 import { AnimatePresence } from 'framer-motion';
 import LoadingBar from './components/LoadingBar/LoadingBar';
 import { useState } from 'react';
+import './index.scss'
+import AnimatedNav from './components/AnimatedNav/AnimatedNav';
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
@@ -33,12 +31,9 @@ function App() {
           <LoadingBar />
         )}
       </AnimatePresence>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
+      <BrowserRouter>
+        <AnimatedNav />
+      </BrowserRouter>
     </>
   )
 }

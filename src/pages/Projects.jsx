@@ -1,8 +1,16 @@
+import { AnimatePresence } from "framer-motion";
+import Transition from "../components/Transition/Transtion";
+import Navbar from "../components/Navbar/Navbar";
 
 
 function Projects() {
   return (
-    <h1>Projects</h1>
+    <>
+      <Transition >
+        <Navbar />
+        <h1>Projects</h1>
+      </Transition >
+    </>
   )
 }
 

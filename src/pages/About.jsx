@@ -1,10 +1,17 @@
+import Navbar from '../components/Navbar/Navbar';
+import Transition from '../components/Transition/Transtion';
 import styles from './page-index.module.scss'
 
 
 function About() {
 
   return (
-    <h1>About</h1>
+    <>
+      <Transition>
+        <Navbar />
+        <h1>About</h1>
+      </Transition>
+    </>
   )
 }
 
