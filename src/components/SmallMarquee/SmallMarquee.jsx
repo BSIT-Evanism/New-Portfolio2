@@ -61,6 +61,9 @@ function SmallMarquee() {
           <p>evan solanoy</p>
           <p>evan solanoy</p>
           <p>evan solanoy</p>
+          <p>evan solanoy</p>
+          <p>evan solanoy</p>
+          <p>evan solanoy</p>
 
         </motion.div>
       </div>
@@ -70,6 +73,9 @@ function SmallMarquee() {
           animate={{ x: [-1024, 0] }}
           transition={{ repeat: Infinity, duration: 50, repeatType: "loop" }}
         >
+          <p>evan solanoy</p>
+          <p>evan solanoy</p>
+          <p>evan solanoy</p>
           <p>evan solanoy</p>
           <p>evan solanoy</p>
           <p>evan solanoy</p>
