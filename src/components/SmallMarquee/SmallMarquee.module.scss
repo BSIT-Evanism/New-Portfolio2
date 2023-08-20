@@ -13,6 +13,20 @@
   white-space: nowrap;
 }
 
+.slidingTextTop {
+  position: fixed;
+  top: 50px;
+  border: 2px solid black;
+  border-left: 0;
+  border-right: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
 .slidingText2 {
   position: fixed;
   bottom: 0;
@@ -26,7 +40,22 @@
   white-space: nowrap;
 }
 
+.slidingTextTop2 {
+  position: fixed;
+  bottom: 50px;
+  border: 2px solid black;
+  border-left: 0;
+  border-right: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+
+
 .container{
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
