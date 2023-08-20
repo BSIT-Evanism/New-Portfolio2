@@ -2,7 +2,19 @@
 .transitionEffect {
 width: 100vw;
 height: 100vh;
-background: black;
+background: #D7C8B1;
+text-transform: uppercase;
+position: fixed;
+top: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.transitionEffect2 {
+width: 100vw;
+height: 100vh;
+background: #D7C8B1;
 text-transform: uppercase;
 position: fixed;
 top: 0;
@@ -12,7 +24,7 @@ justify-content: center;
 }
 
 .path {
-  color: white;
+  color: black;
   position: absolute;
 }
 

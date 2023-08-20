@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import Transition from "../components/Transition/Transtion";
+import Transition from "../components/Transition/Transition";
 import Navbar from "../components/Navbar/Navbar";
 
 

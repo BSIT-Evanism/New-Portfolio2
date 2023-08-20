@@ -1,6 +1,6 @@
 import Marquee from '../components/Marquee/Marquee';
 import Navbar from '../components/Navbar/Navbar';
-import Transition from '../components/Transition/Transtion';
+import Transition from '../components/Transition/Transition';
 import styles from './page-index.module.scss'
 
 function Home() {

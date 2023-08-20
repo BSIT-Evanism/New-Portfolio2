@@ -7,7 +7,7 @@ function Marquee({ children }) {
       <motion.div
         className={styles.child}
         animate={{ x: [0, -1035] }}
-        transition={{ repeat: Infinity, repeatType: "loop", duration: 5, ease: "linear" }}
+        transition={{ repeat: Infinity, repeatType: "loop", duration: 10, ease: "linear" }}
       >
         {children}
       </motion.div>
