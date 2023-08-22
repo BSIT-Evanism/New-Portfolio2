@@ -3,62 +3,72 @@ import styles from './Navbar.module.scss'
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
+import Links from "../Links/Links";
+import { useLocation } from "react-router-dom";
 
 
 function Navbar() {
   const [hover, setHover] = useState(false)
+  const { pathname } = useLocation()
+
+
+  useEffect(() => {
+    console.log(hover)
+  }, [hover])
 
   const container = {
     hidden: { y: "100vh" },
     show: {
       y: 0,
       transition: {
-        type: "spring", bounce: 0.3, damping: 9, mass: 2, velocity: 0.2, delay: 1.5
-      }
-    },
-    hover: {
-      scale: 1.2,
-      transition: {
-        damping: 15, type: "spring", stiffness: 400
+        type: "spring", bounce: 0.2, damping: 20, mass: 2, velocity: 0.3, delay: 1.5
       }
     }
   }
 
   return (
     <>
-      <AnimatePresence mode="popLayout">
+      <AnimatePresence mode="wait">
         <motion.div className={styles.nav}
           layoutId="nav"
           variants={container}
           initial="hidden"
           animate="show"
-          whileHover="hover"
+          whileHover={{ width: 400 }}
           onHoverStart={() => setHover(true)}
           onHoverEnd={() => setHover(false)}
         >
-          <Link className={styles.links} to="/"><h3>Home</h3></Link>
-          {hover && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Link className={styles.links} to="/about"><h3>About</h3></Link>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
-                <Link className={styles.links} to="/projects"><h3>Projects</h3></Link>
-              </motion.div>
-            </>
-          )}
+          {pathname === "/" ? (
+            <Links>
+              <Link className={styles.links} to="/"><h3>Home</h3></Link>
+            </Links>
+          ) : hover ? (
+            <Links>
+              <Link className={styles.links} to="/"><h3>Home</h3></Link>
+            </Links>
+          ) : null}
+          {pathname === "/about" ? (
+            <Links>
+              <Link className={styles.links} to="/about"><h3>About</h3></Link>
+            </Links>
+          ) : hover ? (
+            <Links>
+              <Link className={styles.links} to="/about"><h3>About</h3></Link>
+            </Links>
+          ) : null}
+          {pathname === "/projects" ? (
+            <Links>
+              <Link className={styles.links} to="/projects"><h3>Projects</h3></Link>
+            </Links>
+          ) : hover ? (
+            <Links>
+              <Link className={styles.links} to="/"><h3>Projects</h3></Link>
+            </Links>
+          ) : null}
+
         </motion.div>
-      </AnimatePresence>
+      </AnimatePresence >
     </>
   )
 }
