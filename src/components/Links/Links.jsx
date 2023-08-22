@@ -26,11 +26,11 @@ function Links({ locationName, loc, hover }) {
     <>
       {pathname === loc ? (
         <Trans loc={loc}>
-          <Link className={styles.linksActive} to={loc}><h3>{locationName}</h3></Link>
+          <Link className={`${styles.linksActive} ${hover && (styles.linkExtended)}`} to={loc}><h3>{locationName}</h3></Link>
         </Trans>
       ) : hover ? (
         <Trans loc={loc}>
-          <Link className={styles.links} to={loc}><h3>{locationName}</h3></Link>
+          <Link className={`${styles.links} ${styles.linkHover}`} to={loc}><h3>{locationName}</h3></Link>
         </Trans>
       ) : null}
 
