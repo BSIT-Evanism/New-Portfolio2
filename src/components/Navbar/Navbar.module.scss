@@ -10,12 +10,9 @@
   border-radius: 40px;
   position: fixed;
   bottom: 50px;
-  left: 45vw;
+  left: 35vw;
   overflow: hidden;
-  }
+  transform-origin: center;
+ }
 
-.links {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+

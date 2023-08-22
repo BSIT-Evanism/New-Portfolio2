@@ -39,34 +39,9 @@ function Navbar() {
           onHoverStart={() => setHover(true)}
           onHoverEnd={() => setHover(false)}
         >
-          {pathname === "/" ? (
-            <Links>
-              <Link className={styles.links} to="/"><h3>Home</h3></Link>
-            </Links>
-          ) : hover ? (
-            <Links>
-              <Link className={styles.links} to="/"><h3>Home</h3></Link>
-            </Links>
-          ) : null}
-          {pathname === "/about" ? (
-            <Links>
-              <Link className={styles.links} to="/about"><h3>About</h3></Link>
-            </Links>
-          ) : hover ? (
-            <Links>
-              <Link className={styles.links} to="/about"><h3>About</h3></Link>
-            </Links>
-          ) : null}
-          {pathname === "/projects" ? (
-            <Links>
-              <Link className={styles.links} to="/projects"><h3>Projects</h3></Link>
-            </Links>
-          ) : hover ? (
-            <Links>
-              <Link className={styles.links} to="/projects"><h3>Projects</h3></Link>
-            </Links>
-          ) : null}
-
+          <Links locationName="home" loc="/" hover={hover} />
+          <Links locationName="about" loc="/about" hover={hover} />
+          <Links locationName="Projects" loc="/projects" hover={hover} />
         </motion.div>
       </AnimatePresence >
     </>
