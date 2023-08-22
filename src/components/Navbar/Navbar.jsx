@@ -63,7 +63,7 @@ function Navbar() {
             </Links>
           ) : hover ? (
             <Links>
-              <Link className={styles.links} to="/"><h3>Projects</h3></Link>
+              <Link className={styles.links} to="/projects"><h3>Projects</h3></Link>
             </Links>
           ) : null}
 
