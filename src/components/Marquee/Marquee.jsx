@@ -2,8 +2,8 @@ import { useState } from 'react';
 import styles from './Marquee.module.scss'
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { LayoutGroup } from 'framer-motion';
 import { AnimatePresence } from 'framer-motion';
+
 
 function MiniMarquee({ nameInput }) {
   return (
@@ -40,19 +40,22 @@ function Marquee({ children, handleChange, routeName }) {
 
   return (
     <>
-
+  <AnimatePresence mode="popLayout">
       {hover && (
         
         <motion.div className={styles.slidingText}
           initial={{ y: "5vh" }}
           animate={{ y: 0 }}
           exit={{y: "5vh"}}
-          transition={{ duration: 0.5 }}
-
+          transition={{ duration: 0.3 }}
+          
         >
           <MiniMarquee nameInput={routeName}  />
         </motion.div>
       )}
+      </AnimatePresence>
+      <AnimatePresence>
+
       <motion.div className={styles.marquee}
         layoutId='marquee'
         onMouseEnter={() => setHover(true)}
@@ -60,6 +63,7 @@ function Marquee({ children, handleChange, routeName }) {
         transition={{ duration: 0.3 }}
       >
         <motion.div
+        layoutId='inside'
           className={styles.child}
           animate={{ x: [0, -1590] }}
           transition={{ repeat: Infinity, repeatType: "loop", duration: 10, ease: "linear" }}
@@ -67,7 +71,7 @@ function Marquee({ children, handleChange, routeName }) {
 
           <motion.div className={styles.nest}
 
-          >
+>
             <h1 className={styles.text}>
               {children}
             </h1>
@@ -75,18 +79,22 @@ function Marquee({ children, handleChange, routeName }) {
           </motion.div>
         </motion.div>
       </motion.div>
+            </AnimatePresence>
+        <AnimatePresence mode="popLayout">
+          
       {hover && (
         
         <motion.div className={styles.slidingText2}
         initial={{ y: "-7vh" }}
         animate={{ y: 0 }}
         exit={{y: "-7vh"}}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }}
         
         >
           <MiniMarquee nameInput="home"  />
         </motion.div>
       )}
+        </AnimatePresence>
     </>
   )
 }
