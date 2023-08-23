@@ -6,8 +6,16 @@ import { motion } from 'framer-motion';
 import { transition } from './animation';
 import Carousel from '../components/Carousel/Carousel';
 import Trademark from '../components/Trademark/Trademark';
+import { useState } from 'react';
 
 function Home() {
+  const[hover,setHover] = useState(false)
+
+  const handleChange = (param) => {
+    setHover(param)
+    console.log("the param is",param)
+  }
+
   return (
     <>
       <Transition>
@@ -22,8 +30,9 @@ function Home() {
           <Carousel />
           <Trademark />
         </div>
-        <Marquee><h1 className={styles.text}>Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything</h1></Marquee>
-        <Marquee><h1 className={styles.text}>Also --- I'm also a design enthusiast, crafting microinteractions with futuristic flair and edge Also --- I'm also a design enthusiast, crafting microinteractions with futuristic flair and edge</h1></Marquee>
+        <Marquee handleChange={handleChange} routeName="home">
+          Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
+        </Marquee>
       </Transition>
     </>
   )

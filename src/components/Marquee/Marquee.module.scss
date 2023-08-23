@@ -1,3 +1,40 @@
+.slidingText {
+  position: relative;
+  top: 0;
+  border: 2px solid black;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  z-index: -1;
+
+}
+
+.slidingText2 {
+  position: relative;
+  top: 0;
+  border: 2px solid black;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid black;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  z-index: -1;
+}
+
+.container{
+  display: flex;
+  gap: 50px;
+}
 
 
 .marquee {
@@ -6,24 +43,29 @@
   border-right: 0 ;
   white-space: nowrap;
   overflow: hidden;
+  z-index: 3;
 }
 
 .child {
   display: flex;
   flex-direction: row;
-
+  
   &:hover > h1 {
     color: blue;
   }
 }
 
 .nest {
-  background-color: rgba(0, 0, 255, 0.164);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(178,178,255);
 
   transition: color 100ms linear;
 
   &:hover {
-    background: rgba(0, 0, 255, 0.300);
+    background: rgb(178,178,255);
   }
 }
+
+
 

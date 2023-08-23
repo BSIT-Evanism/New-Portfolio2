@@ -16,7 +16,7 @@ function Transition({ children }) {
         exit={{ scaleY: 1 }}
         transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
       >
-        <SmallMarquee />
+        <SmallMarquee nameInput="evan solanoy " />
         <motion.h2 className={styles.path}
           initial={{ rotateX: 180 }}
           animate={{ rotateX: 0 }}
@@ -31,7 +31,7 @@ function Transition({ children }) {
         exit={{ scaleY: 0 }}
         transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 1 }}
       >
-        <SmallMarquee />
+        <SmallMarquee nameInput="evan solanoy " />
         <motion.h2 className={styles.path}
           initial={{ rotateX: 90 }}
           animate={{ rotateX: 0 }}

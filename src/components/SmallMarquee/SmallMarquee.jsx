@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import styles from "./SmallMarquee.module.scss"
 
-function SmallMarquee() {
+function SmallMarquee({nameInput}) {
   return (
     <>
       <div className={styles.slidingText}>
@@ -10,18 +10,18 @@ function SmallMarquee() {
           animate={{ x: [0, -1024] }}
           transition={{ repeat: Infinity, duration: 10, repeatType: "loop" }}
         >
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
         </motion.div>
       </div>
       <div className={styles.slidingTextTop}>
@@ -30,18 +30,18 @@ function SmallMarquee() {
           animate={{ x: [-1024, 0] }}
           transition={{ repeat: Infinity, duration: 10, repeatType: "loop" }}
         >
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
         </motion.div>
       </div>
 
@@ -52,18 +52,18 @@ function SmallMarquee() {
           animate={{ x: [0, -1024] }}
           transition={{ repeat: Infinity, duration: 50, repeatType: "loop" }}
         >
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
 
         </motion.div>
       </div>
@@ -73,18 +73,18 @@ function SmallMarquee() {
           animate={{ x: [-1024, 0] }}
           transition={{ repeat: Infinity, duration: 50, repeatType: "loop" }}
         >
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
-          <p>evan solanoy</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
+          <p>{nameInput}</p>
 
         </motion.div>
       </div>
