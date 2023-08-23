@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
 import styles from './Navbar.module.scss'
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import Links from "../Links/Links";
-import { useLocation } from "react-router-dom";
 
 
 function Navbar() {
   const [hover, setHover] = useState(false)
-  const { pathname } = useLocation()
+  
 
 
   useEffect(() => {

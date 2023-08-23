@@ -1,4 +1,4 @@
-import styles from './Marquee.module.css'
+import styles from './Marquee.module.scss'
 import { motion } from 'framer-motion';
 
 function Marquee({ children }) {
@@ -6,7 +6,7 @@ function Marquee({ children }) {
     <div className={styles.marquee}>
       <motion.div
         className={styles.child}
-        animate={{ x: [0, -1035] }}
+        animate={{ x: [0, -1590] }}
         transition={{ repeat: Infinity, repeatType: "loop", duration: 10, ease: "linear" }}
       >
         {children}

@@ -4,10 +4,15 @@
   border: 2px solid black;
   border-left: 0 ;
   border-right: 0 ;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .child {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+
+  &:hover > h1 {
+    color: blue;
+  }
 }
