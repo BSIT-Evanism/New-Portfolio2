@@ -16,3 +16,14 @@
     color: blue;
   }
 }
+
+.nest {
+  background-color: rgba(0, 0, 255, 0.164);
+
+  transition: color 100ms linear;
+
+  &:hover {
+    background: rgba(0, 0, 255, 0.300);
+  }
+}
+

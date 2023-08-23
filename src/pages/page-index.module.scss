@@ -13,6 +13,16 @@
 }
 
 .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  
+  & > h1 {
+    padding: 20px;
+  }
+}
+
+.nest {
   background-color: rgba(0, 0, 255, 0.164);
 }
 

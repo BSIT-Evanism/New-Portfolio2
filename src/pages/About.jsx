@@ -11,12 +11,14 @@ function About() {
     <>
       <Transition>
         <Navbar />
-        <motion.h1
-          variants={transition}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >About</motion.h1>
+        <div className={styles.wrapper}>
+          <motion.h1
+            variants={transition}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+          >About</motion.h1>
+        </div>
       </Transition>
     </>
   )
