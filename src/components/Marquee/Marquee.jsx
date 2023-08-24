@@ -23,7 +23,6 @@ function MiniMarquee({ nameInput }) {
       <p>{nameInput}</p>
       <p>{nameInput}</p>
       <p>{nameInput}</p>
-      <p>{nameInput}</p>
     </motion.div>
   )
 }
@@ -57,13 +56,13 @@ function Marquee({ children, handleChange, routeName }) {
       <AnimatePresence>
 
         <motion.div className={styles.marquee}
-          layoutId='marquee'
+          layout
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            layoutId='inside'
+            layout
             className={styles.child}
             animate={{ x: [0, -1590] }}
             transition={{ repeat: Infinity, repeatType: "loop", duration: 20, ease: "linear" }}

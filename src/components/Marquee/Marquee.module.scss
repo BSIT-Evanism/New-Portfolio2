@@ -12,7 +12,8 @@
   align-items: center;
   white-space: nowrap;
   z-index: -1;
-
+  overflow: hidden;
+  
 }
 
 .slidingText2 {
@@ -29,11 +30,17 @@
   align-items: center;
   white-space: nowrap;
   z-index: -1;
+  overflow: hidden;
 }
 
 .container{
   display: flex;
   gap: 50px;
+  overflow: hidden;
+  
+  p {
+    overflow: hidden;
+  }
 }
 
 

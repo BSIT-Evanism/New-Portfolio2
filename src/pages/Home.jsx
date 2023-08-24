@@ -7,9 +7,11 @@ import { transition } from './animation';
 import Carousel from '../components/Carousel/Carousel';
 import Trademark from '../components/Trademark/Trademark';
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 function Home() {
   const [hover, setHover] = useState(false)
+
 
   const handleChange = (param) => {
     setHover(param)
@@ -31,9 +33,21 @@ function Home() {
           <Carousel />
           <Trademark />
         </div>
-        <Marquee handleChange={handleChange} routeName="home">
-          Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
-        </Marquee>
+        <AnimatePresence>
+        
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 0.3}}
+          >
+
+          <Marquee handleChange={handleChange} routeName="home">
+            Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
+          </Marquee>
+          </motion.div>
+      
+            </AnimatePresence>
       </Transition>
     </>
   )
