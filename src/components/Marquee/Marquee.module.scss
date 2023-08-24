@@ -58,14 +58,17 @@
 .nest {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgb(178,178,255);
+  background-color: #DAC0A3;
 
-  transition: color 100ms linear;
+  transition: background 100ms linear;
 
   &:hover {
-    background: rgb(178,178,255);
+    background: #EADBC8;
   }
 }
 
 
+.text {
+  color: #102C57;
+}
 

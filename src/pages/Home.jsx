@@ -9,11 +9,11 @@ import Trademark from '../components/Trademark/Trademark';
 import { useState } from 'react';
 
 function Home() {
-  const[hover,setHover] = useState(false)
+  const [hover, setHover] = useState(false)
 
   const handleChange = (param) => {
     setHover(param)
-    console.log("the param is",param)
+    console.log("the param is", param)
   }
 
   return (
@@ -22,6 +22,7 @@ function Home() {
         <Navbar />
         <div className={styles.wrapper}>
           <motion.h1
+            className={styles.title}
             variants={transition}
             initial="initial"
             animate="enter"

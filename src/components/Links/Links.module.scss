@@ -7,19 +7,11 @@
 }
 
 .linksActive {
-  color: black;
+  color: #102C57;
   text-decoration: none;
   
   font-size: 15px;
   text-transform: uppercase;
-}
-
-.linkExtended::after {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 1px;
-  border-bottom: 2px solid black;
 }
 
 .linkHover::after {
