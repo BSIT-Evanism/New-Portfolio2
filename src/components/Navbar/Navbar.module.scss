@@ -8,13 +8,36 @@
   width: 12vw;
   padding: 20px 30px;
   border-radius: 40px;
-  position: fixed;
-  bottom: 50px;
-  left: 35vw;
+  position: absolute;
   overflow: hidden;
   transform-origin: center;
   background: white;
   z-index: 5;
  }
 
+ .wrapper {
+  position: absolute;
+  bottom: 15vh;
+  left: 45vw;
+ }
+ 
+ .tooltip {
+   position: relative;
+   height: 50px;
+   top: 3.5vh;
+   left: -2vw;
+   
+   &__text {
+     position: absolute;
+     white-space: nowrap;
+     font-weight: 700;
+     top: 2vh;
+     left: -5vw;
+     rotate: -30deg;
+  }
+ }
+ 
+ .motionwrappper {
+  transform-origin: bottom;
+ }
 
