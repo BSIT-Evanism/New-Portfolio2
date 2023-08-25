@@ -29,16 +29,18 @@ function Home() {
             initial="initial"
             animate="enter"
             exit="exit"
-          >Home</motion.h1>
+          >
+            <img src="../../public/evans-logo.svg" alt="mainlogo" />
+            Home</motion.h1>
           <Carousel />
           <Trademark />
         </div>
-          <Marquee handleChange={handleChange} routeName="home">
-            Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
-          </Marquee>
-          <div className={styles.test}>test scroll</div>
-          <div className={styles.test}>test scroll</div>
-          <div className={styles.test}>test scroll</div>
+        <Marquee handleChange={handleChange} routeName="home">
+          Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
+        </Marquee>
+        <div className={styles.test}>test scroll</div>
+        <div className={styles.test}>test scroll</div>
+        <div className={styles.test}>test scroll</div>
       </Transition>
     </>
   )

@@ -28,6 +28,12 @@
 
 .title {
  color: #102C57;
+ display: flex;
+
+ img {
+   height: 50px;
+   align-self: center;
+ }
 }
 
 .test {

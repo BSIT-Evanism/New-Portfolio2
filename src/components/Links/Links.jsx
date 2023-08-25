@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 function Trans({ children, loc }) {
   return (
     <motion.div
+      key={loc}
       layoutId={loc}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

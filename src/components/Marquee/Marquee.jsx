@@ -43,6 +43,7 @@ function Marquee({ children, handleChange, routeName }) {
         {hover && (
 
           <motion.div className={styles.slidingText}
+            key={"slidingText"}
             initial={{ y: "5vh" }}
             animate={{ y: 0 }}
             exit={{ y: "5vh" }}
@@ -53,32 +54,34 @@ function Marquee({ children, handleChange, routeName }) {
           </motion.div>
         )}
       </AnimatePresence>
-      <AnimatePresence>
 
-        <motion.div className={styles.marquee}
+      <motion.div className={styles.marquee}
+        key={"outer"}
+        layout
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.div
+          key={"inner"}
           layout
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          transition={{ duration: 0.5 }}
+          className={styles.child}
+          animate={{ x: [0, -1590] }}
+          transition={{ repeat: Infinity, repeatType: "loop", duration: 20, ease: "linear" }}
         >
-          <motion.div
-            layout
-            className={styles.child}
-            animate={{ x: [0, -1590] }}
-            transition={{ repeat: Infinity, repeatType: "loop", duration: 20, ease: "linear" }}
+
+          <motion.div className={styles.nest}
+            key={"nest"}
           >
-
-            <motion.div className={styles.nest}
-
+            <h1 className={styles.text}
+              key={"innerText"}
             >
-              <h1 className={styles.text}>
-                {children}
-              </h1>
+              {children}
+            </h1>
 
-            </motion.div>
           </motion.div>
         </motion.div>
-      </AnimatePresence>
+      </motion.div>
       <AnimatePresence mode="popLayout">
 
         {hover && (
