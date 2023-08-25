@@ -33,21 +33,12 @@ function Home() {
           <Carousel />
           <Trademark />
         </div>
-        <AnimatePresence>
-        
-          <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            exit={{opacity: 0}}
-            transition={{duration: 0.3}}
-          >
-
           <Marquee handleChange={handleChange} routeName="home">
             Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
           </Marquee>
-          </motion.div>
-      
-            </AnimatePresence>
+          <div className={styles.test}>test scroll</div>
+          <div className={styles.test}>test scroll</div>
+          <div className={styles.test}>test scroll</div>
       </Transition>
     </>
   )

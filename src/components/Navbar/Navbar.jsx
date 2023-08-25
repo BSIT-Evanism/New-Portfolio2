@@ -46,7 +46,11 @@ function Navbar() {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <motion.div className={styles.wrapper}
+          variants={container}
+          initial="hidden"
+          animate="show"
+    >
       <AnimatePresence>
 
       {!hover && (
@@ -54,10 +58,7 @@ function Navbar() {
       )}
         </AnimatePresence>
         <motion.div className={styles.nav}
-          layoutId="nav"
-          variants={container}
-          initial="hidden"
-          animate="show"
+          layoutId='innerNav'
           whileHover={{ width: 400, x: -100 }}
           onHoverStart={() => setHover(true)}
           onHoverEnd={() => setHover(false)}
@@ -68,7 +69,7 @@ function Navbar() {
           <Links locationName="Projects" loc="/projects" hover={hover} />
       </AnimatePresence >
         </motion.div>
-    </div>
+    </motion.div>
   )
 }
 
