@@ -7,7 +7,7 @@ import { transition } from './animation';
 import Carousel from '../components/Carousel/Carousel';
 import Trademark from '../components/Trademark/Trademark';
 import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import Logo from '../../public/evan.svg'
 
 function Home() {
   const [hover, setHover] = useState(false)
@@ -30,7 +30,7 @@ function Home() {
             animate="enter"
             exit="exit"
           >
-            <img src="../../public/evans-logo.svg" alt="mainlogo" />
+            <img src={Logo} alt='myLogo' />
             Home</motion.h1>
           <Carousel />
           <Trademark />
