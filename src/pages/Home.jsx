@@ -7,7 +7,7 @@ import { transition } from './animation';
 import Carousel from '../components/Carousel/Carousel';
 import Trademark from '../components/Trademark/Trademark';
 import { useState } from 'react';
-import Logo from '../../public/evan.svg'
+import Logo from '../assets/evan.svg'
 
 function Home() {
   const [hover, setHover] = useState(false)
@@ -23,15 +23,15 @@ function Home() {
       <Transition>
         <Navbar />
         <div className={styles.wrapper}>
-          <motion.h1
-            className={styles.title}
+          <motion.div
+            className={styles.logo}
             variants={transition}
             initial="initial"
             animate="enter"
             exit="exit"
           >
             <img src={Logo} alt='myLogo' />
-            Home</motion.h1>
+          </motion.div>
           <Carousel />
           <Trademark />
         </div>

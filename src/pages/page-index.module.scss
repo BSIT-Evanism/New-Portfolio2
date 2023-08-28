@@ -26,6 +26,7 @@
   background-color: rgba(0, 0, 255, 0.164);
 }
 
+
 .title {
  color: #102C57;
  display: flex;
@@ -34,6 +35,14 @@
    height: 50px;
    align-self: center;
  }
+}
+
+.logo {
+  img {
+    height: 50px;
+    min-height: 50px;
+    margin: 30px;
+  }
 }
 
 .test {
