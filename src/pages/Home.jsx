@@ -30,7 +30,9 @@ function Home() {
             animate="enter"
             exit="exit"
           >
-            <img src={Logo} alt='myLogo' />
+            <a href="https://react.dev" target='_blank'>
+              <img src={Logo} alt='myLogo' />
+            </a>
           </motion.div>
           <Carousel />
           <Trademark />
