@@ -8,6 +8,7 @@ import Carousel from '../components/Carousel/Carousel';
 import Trademark from '../components/Trademark/Trademark';
 import { useState } from 'react';
 import Logo from '../assets/evan.svg'
+import HeroSection from '../components/HeroSection/HeroSection';
 
 function Home() {
   const [hover, setHover] = useState(false)
@@ -37,10 +38,10 @@ function Home() {
           <Carousel />
           <Trademark />
         </div>
+        <HeroSection />
         <Marquee handleChange={handleChange} routeName="home">
           Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
         </Marquee>
-        <div className={styles.test}>test scroll</div>
         <div className={styles.test}>test scroll</div>
         <div className={styles.test}>test scroll</div>
       </Transition>

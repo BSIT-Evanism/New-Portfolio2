@@ -51,6 +51,13 @@ html {
       font-family: 'Poppins', sans-serif;
       background: #F8F0E5;
       overflow-x: hidden;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 

@@ -1,0 +1,21 @@
+
+
+.banner {
+  border-left: 0;
+  border-radius: 0 50px 50px 0;
+  width: 15vw;
+  height: 15vh;
+  left: 0;
+  top: 50vh;
+  background: white;
+  position: fixed;
+  z-index: 4;
+  background: #102C57;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  h5 {
+    color: #F8F0E5;
+  }
+}

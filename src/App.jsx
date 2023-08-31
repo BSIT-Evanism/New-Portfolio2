@@ -6,6 +6,7 @@ import './index.scss'
 import AnimatedNav from './components/AnimatedNav/AnimatedNav';
 import { BrowserRouter } from 'react-router-dom';
 import IncrementLoc from './context/navbarToggle.jsx';
+import NoticeBanner from './components/NoticeBanner/NoticeBanner';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       </AnimatePresence>
       <BrowserRouter>
         <IncrementLoc>
+          <NoticeBanner />
           <AnimatedNav />
         </IncrementLoc>
       </BrowserRouter>
