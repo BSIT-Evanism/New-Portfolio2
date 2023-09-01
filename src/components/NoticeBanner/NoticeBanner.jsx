@@ -3,11 +3,14 @@ import styles from "./NoticeBanner.module.scss"
 function NoticeBanner({ children }) {
   return (
     <div className={styles.banner}>
-      <h5>
-        Very Early WIP porfolio<br />
-        check my bento instead
-      </h5>
-    </div>
+      <h6>
+        WIP portfolio<br />
+        (check github for details)
+      </h6>
+      <div className={styles.circle}>
+        <div className={styles.ping}></div>
+      </div>
+    </div >
   )
 
 }

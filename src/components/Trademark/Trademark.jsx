@@ -21,7 +21,7 @@ function Trademark() {
       onMouseLeave={() => setHover(false)}
     >
       <motion.div
-        whileHover={{ y: -28 }}
+        whileHover={{ y: -25 }}
       >
         <h3 className={styles.trademark}
         >code by evan solanoy ©</h3>

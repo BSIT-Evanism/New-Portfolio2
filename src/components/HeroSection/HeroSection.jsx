@@ -5,8 +5,8 @@ function HeroSection() {
     <div className={styles.wrapper}>
       <div className={styles.hero}
       >
-        <div className={styles.inner}>
-          <div className={styles.float}></div>
+        <div data-scroll data-scroll-speed="0.1" className={styles.inner}>
+          <div data-scroll data-scroll-speed="0.2" className={styles.float}></div>
         </div>
       </div>
     </div>

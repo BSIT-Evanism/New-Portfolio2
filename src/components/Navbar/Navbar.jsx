@@ -55,7 +55,7 @@ function Navbar() {
     >
       <AnimatePresence>
 
-        {value < 5 && (
+        {value < 3 && (
           !hover && (
             <Tooltip />
           )

@@ -15,7 +15,22 @@
   align-items: center;
   padding: 1rem;
 
-  h5 {
+  h6 {
     color: #F8F0E5;
+  }
+
+  .circle {
+    height: 100%;
+    width: 45%;
+    background: #F8F0E5;
+    border-radius: 3rem;
+
+    .ping {
+      width: 20%;
+      height: 20%;
+      border-radius: 2rem;
+      background: blue;
+      stroke: 20px solid white;
+    }
   }
 }

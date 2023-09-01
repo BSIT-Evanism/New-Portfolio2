@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import LoadingBar from './components/LoadingBar/LoadingBar';
 import { useState } from 'react';
 import './index.scss'
@@ -7,7 +7,6 @@ import AnimatedNav from './components/AnimatedNav/AnimatedNav';
 import { BrowserRouter } from 'react-router-dom';
 import IncrementLoc from './context/navbarToggle.jsx';
 import NoticeBanner from './components/NoticeBanner/NoticeBanner';
-
 
 function App() {
 
@@ -19,11 +18,12 @@ function App() {
         const LocomotiveScroll = (await import('locomotive-scroll')).default;
         const locomotiveScroll = new LocomotiveScroll();
 
-        setTimeout(() => {
-          setLoader(false)
-        }, 3000)
       }
     )()
+    setTimeout(() => {
+      setLoader(false)
+    }, 3000)
+
   }, [])
 
   return (

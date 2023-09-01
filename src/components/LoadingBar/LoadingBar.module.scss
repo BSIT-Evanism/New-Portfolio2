@@ -1,9 +1,22 @@
 
 
-.container {
-  background: black;
-  height: 100vh;
+.containerTop {
+  background: #102C57;
+  height: 50vh;
   width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 15;
+}
+
+.containerBottom {
+  background: #102C57;
+  filter: brightness(0.8);
+  height: 50vh;
+  width: 100vw;
+  bottom: 0;
+  background-origin: padding-box;
   position: absolute;
   z-index: 15;
 }
+
