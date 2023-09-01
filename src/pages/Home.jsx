@@ -38,7 +38,6 @@ function Home() {
             className={styles.logoIn}
             initial={{ y: "-100vh" }}
             animate={{ y: 0 }}
-            exit={{ opacity: 0 }}
             transition={{ duration: 3.5, type: "spring" }}
             src={logo} alt="logo" />
         )}
