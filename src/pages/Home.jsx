@@ -19,6 +19,16 @@ function Home() {
   const [hover, setHover] = useState(false)
   const loader = useContext(IntroContext)
 
+  useEffect(() => {
+    (
+      async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const locomotiveScroll = new LocomotiveScroll();
+      } 
+    )()
+
+  })
+
   const handleChange = (param) => {
     setHover(param)
     

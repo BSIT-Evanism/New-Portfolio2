@@ -6,9 +6,9 @@
   width: 15vw;
   height: 13vh;
   left: 0;
-  top: 50vh;
+  top: 20vh;
   background: white;
-  position: fixed;
+  position: sticky;
   z-index: 4;
   background: #102C57;
   display: flex;
@@ -26,11 +26,16 @@
     border-radius: 3rem;
 
     .ping {
-      width: 20%;
-      height: 20%;
-      border-radius: 2rem;
-      background: blue;
-      stroke: 20px solid white;
+      
+      &__inner {
+        width: 20%;
+        height: 20%;
+        border-radius: 2rem;
+        background: blue;
+        stroke: 20px solid white;
+        stroke: #F8F0E5;
+        stroke-width: 10px;
+      }
     }
   }
 }

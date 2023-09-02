@@ -6,7 +6,6 @@ import './index.scss'
 import AnimatedNav from './components/AnimatedNav/AnimatedNav';
 import { BrowserRouter } from 'react-router-dom';
 import IncrementLoc from './context/navbarToggle.jsx';
-import NoticeBanner from './components/NoticeBanner/NoticeBanner';
 import logo from "./assets/evan.svg"
 
 
@@ -17,14 +16,7 @@ function App() {
   
   
   useEffect(() => {
-
-    (
-      async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
-        const locomotiveScroll = new LocomotiveScroll();
-      } 
-    )()
-
+    
     setTimeout(() => {
       setLoader(false)
     }, 3000)
@@ -49,7 +41,7 @@ function App() {
       </AnimatePresence>
       <BrowserRouter>
         <IncrementLoc>
-          <NoticeBanner />
+          
           <AnimatedNav />
         </IncrementLoc>
       </BrowserRouter>
