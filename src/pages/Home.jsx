@@ -12,24 +12,25 @@ import HeroSection from '../components/HeroSection/HeroSection';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useContext } from 'react';
-import { NavbarContext } from '../context/navbarToggle';
+import { IntroContext, NavbarContext } from '../context/navbarToggle';
 
 
 function Home() {
   const [hover, setHover] = useState(false)
-  const [loader, setLoader] = useState(true)
+  // const [loader, setLoader] = useState(true)
   const value = useContext(NavbarContext)
+  const loader = useContext(IntroContext)
   
-  useEffect(() => {
-      if(value >= 4) {
-        setLoader(false)
-      }
-      setTimeout(() => {
-        setLoader(false)
-      }, 3000)
+  // useEffect(() => {
+  //     if(value >= 4) {
+  //       setLoader(false)
+  //     }
+  //     setTimeout(() => {
+  //       setLoader(false)
+  //     }, 3000)
       
    
-  },[])
+  // },[])
 
   
   const handleChange = (param) => {
