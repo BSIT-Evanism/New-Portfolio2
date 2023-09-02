@@ -42,7 +42,7 @@ function Navbar() {
     show: {
       y: 0,
       transition: {
-        type: "spring", bounce: 0.2, damping: 20, mass: 2, velocity: 0.3, delay: 1.5
+        type: "spring", bounce: 0.2, damping: 20, mass: 2, velocity: 0.3, delay: 0.8
       }
     }
   }

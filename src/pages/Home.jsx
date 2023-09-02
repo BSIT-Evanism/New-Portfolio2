@@ -11,19 +11,27 @@ import Logo from '../assets/evan.svg'
 import HeroSection from '../components/HeroSection/HeroSection';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import logo from '../assets/evan.svg'
+import { useContext } from 'react';
+import { NavbarContext } from '../context/navbarToggle';
+
 
 function Home() {
   const [hover, setHover] = useState(false)
   const [loader, setLoader] = useState(true)
-
+  const value = useContext(NavbarContext)
+  
   useEffect(() => {
-    setTimeout(() => {
-      setLoader(false)
-    }, 4000)
+      if(value >= 4) {
+        setLoader(false)
+      }
+      setTimeout(() => {
+        setLoader(false)
+      }, 3000)
+      console.log(value)
+   
+  },[])
 
-  }, [])
-
+  
   const handleChange = (param) => {
     setHover(param)
     console.log("the param is", param)
@@ -31,18 +39,6 @@ function Home() {
 
   return (
     <>
-      <AnimatePresence>
-        {loader && (
-          <motion.img
-            layoutId='mainlogo'
-            className={styles.logoIn}
-            initial={{ y: "-100vh" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 3.5, type: "spring" }}
-            src={logo} alt="logo" />
-        )}
-      </AnimatePresence>
-
       <Transition>
         <Navbar />
         <div className={styles.wrapper}>
@@ -51,10 +47,10 @@ function Home() {
               <motion.img
                 layoutId='mainlogo'
                 className={styles.logo}
-                // variants={transition}
-                // initial="initial"
-                // animate="enter"
-                // exit="exit"
+                variants={transition}
+                initial={value >= 4 && "initial"}
+                animate={value >= 4 && "enter"}
+                exit={value >= 4 && "exit"}
                 src={Logo} alt='myLogo' />
             )}
           </Link>

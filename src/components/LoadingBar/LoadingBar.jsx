@@ -1,10 +1,11 @@
 import styles from "./LoadingBar.module.scss"
 import { motion } from "framer-motion";
-import logo from "../../assets/evan.svg"
 
 function LoadingBar() {
+  
   return (
     <>
+    
       <motion.div className={styles.containerTop}
         initial={{ x: 0 }}
         exit={{ x: "200vw" }}

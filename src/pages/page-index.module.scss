@@ -42,6 +42,7 @@
   padding: 0 50px 0 50px;
     height: 50px;
     min-height: 50px;
+    z-index: 18;
 }
 
 .test {
@@ -51,12 +52,4 @@
   overflow: hidden;
 }
 
-.logoIn {
-  position: absolute;
-  height: 50vh;
-  width: 50vw;
-  z-index: 16;
-  top: 20vh;
-  left: 20vw;
-}
 

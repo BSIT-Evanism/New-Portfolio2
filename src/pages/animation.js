@@ -1,15 +1,15 @@
 export const transition = {
   initial: {
-    x: "-100vw"
+    y: "-100vh"
   },
   enter: {
-    x: 0,
+    y: 0,
     transition: {
-      duration: 1.5, type: "spring", delay: 2
+      duration: 1.5, type: "spring", delay: 0.8
     }
   },
   exit: {
-    x: "-100vw",
+    y: "-100vh",
     transition: {
       duration: 0.8, type: "spring"
     }
