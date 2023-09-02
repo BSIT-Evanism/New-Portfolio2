@@ -23,7 +23,7 @@ function App() {
         const LocomotiveScroll = (await import('locomotive-scroll')).default;
         const locomotiveScroll = new LocomotiveScroll();
       } 
-    )
+    )()
 
     setTimeout(() => {
       setLoader(false)
