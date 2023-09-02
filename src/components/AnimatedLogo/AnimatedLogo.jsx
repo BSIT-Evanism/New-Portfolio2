@@ -10,7 +10,21 @@ export default function AnimatedLogo() {
 
     return (
         <motion.div
-            
+            layoutId='mainlogo'
+
+            initial={value >= 4 && { y: "-100vh"} }
+            animate={value >= 4 && {
+                y: 0,
+                transition: {
+                    duration: 1.5, type: "spring", delay: 0.8
+                }
+            }}
+            exit={value >= 4 && {
+                y: "-100vh",
+                transition: {
+                    duration: 0.8, type: "spring"
+                }
+            }}
         >
             <motion.img
                 className={styles.logo}

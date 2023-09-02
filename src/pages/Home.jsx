@@ -11,14 +11,13 @@ import HeroSection from '../components/HeroSection/HeroSection';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useContext } from 'react';
-import { IntroContext, NavbarContext } from '../context/navbarToggle';
+import { IntroContext } from '../context/navbarToggle';
 import AnimatedLogo from '../components/AnimatedLogo/AnimatedLogo';
 
 
 function Home() {
   const [hover, setHover] = useState(false)
   const loader = useContext(IntroContext)
-  const value = useContext(NavbarContext)
 
   const handleChange = (param) => {
     setHover(param)
@@ -32,25 +31,7 @@ function Home() {
         <div className={styles.wrapper}>
           <Link to="/">
             {!loader && (
-              <motion.div
-              layoutId='mainlogo'
-
-            initial={value >= 4 && { y: "-100vh"} }
-            animate={value >= 4 && {
-                y: 0,
-                transition: {
-                    duration: 1.5, type: "spring", delay: 0.8
-                }
-            }}
-            exit={value >= 4 && {
-                y: "-100vh",
-                transition: {
-                    duration: 0.8, type: "spring"
-                }
-            }}
-              >
-                <AnimatedLogo />
-              </motion.div>
+              <AnimatedLogo />
             )}
           </Link>
           <Carousel />
