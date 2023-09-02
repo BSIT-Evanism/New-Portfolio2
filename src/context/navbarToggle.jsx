@@ -18,7 +18,7 @@ function IncrementLoc({ children }) {
     } else {
       changeLocation(prev => prev = pathname)
     }
-  }, [location])
+  }, [pathname, location])
 
   useEffect(() => {
     setChangeLoc((prev) => prev += 1)
