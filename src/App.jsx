@@ -8,15 +8,23 @@ import { BrowserRouter } from 'react-router-dom';
 import IncrementLoc from './context/navbarToggle.jsx';
 import NoticeBanner from './components/NoticeBanner/NoticeBanner';
 import logo from "./assets/evan.svg"
-import LocomotiveScroll from 'locomotive-scroll';
+
 
 function App() {
 
   const [loader, setLoader] = useState(true)
 
-  const locomotiveScroll = new LocomotiveScroll();
+  
   
   useEffect(() => {
+
+    (
+      async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const locomotiveScroll = new LocomotiveScroll();
+      } 
+    )
+
     setTimeout(() => {
       setLoader(false)
     }, 3000)
