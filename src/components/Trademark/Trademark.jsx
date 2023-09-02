@@ -7,9 +7,6 @@ import { AnimatePresence } from 'framer-motion';
 function Trademark() {
   const [hover, setHover] = useState(false)
 
-  useEffect(() => {
-    console.log(hover)
-  }, [hover])
   return (
     <motion.div className={styles.container}
       key="trademark"

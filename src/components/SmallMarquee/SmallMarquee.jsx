@@ -10,9 +10,7 @@ function SmallMarquee({nameInput}) {
           animate={{ x: [0, -1024] }}
           transition={{ repeat: Infinity, duration: 10, repeatType: "loop" }}
         >
-          {Array.from({length: 10},() => (
-          <p>{nameInput}</p>
-          ))}
+      
           <p>{nameInput}</p>
           <p>{nameInput}</p>
           <p>{nameInput}</p>

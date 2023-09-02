@@ -27,20 +27,20 @@ function Home() {
       setTimeout(() => {
         setLoader(false)
       }, 3000)
-      console.log(value)
+      
    
   },[])
 
   
   const handleChange = (param) => {
     setHover(param)
-    console.log("the param is", param)
+    
   }
 
   return (
     <>
       <Transition>
-        <Navbar />
+        <Navbar key={"home"}/>
         <div className={styles.wrapper}>
           <Link to="/">
             {!loader && (

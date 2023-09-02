@@ -7,6 +7,7 @@ import Links from "../Links/Links";
 import { NavbarContext } from '../../context/navbarToggle';
 import { useContext } from 'react';
 
+
 function Tooltip() {
 
   return (
@@ -32,10 +33,6 @@ function Tooltip() {
 function Navbar() {
   const [hover, setHover] = useState(false)
   const value = useContext(NavbarContext)
-
-  useEffect(() => {
-    console.log(hover)
-  }, [hover])
 
   const container = {
     hidden: { y: "100vh" },
@@ -67,10 +64,13 @@ function Navbar() {
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
       >
-        <AnimatePresence mode="popLayout">
-          <Links locationName="home" loc="/" hover={hover} />
-          <Links locationName="about" loc="/about" hover={hover} />
-          <Links locationName="Projects" loc="/projects" hover={hover} />
+        <AnimatePresence>
+          
+
+          <Links key={"home"} locationName="home" loc="/" hover={hover} />
+          <Links key={"about"} locationName="about" loc="/about" hover={hover} />
+          <Links key={"projects"} locationName="Projects" loc="/projects" hover={hover} />
+          
         </AnimatePresence >
       </motion.div>
     </motion.div>

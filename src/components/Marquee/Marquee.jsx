@@ -34,7 +34,6 @@ function Marquee({ children, handleChange, routeName }) {
 
   useEffect(() => {
     handleChange(hover)
-    console.log(hover)
   }, [hover])
 
   return (
