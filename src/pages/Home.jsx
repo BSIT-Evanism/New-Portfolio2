@@ -44,7 +44,7 @@ function Home() {
         <Navbar key={"home"}/>
         <div className={styles.wrapper}>
           <Link to="/">
-            {!loader && (
+            {/* {!loader && ( */}
               <motion.img
                 layoutId='mainlogo'
                 className={styles.logo}
@@ -53,7 +53,7 @@ function Home() {
                 animate={value >= 4 && "enter"}
                 exit={value >= 4 && "exit"}
                 src={Logo} alt='myLogo' />
-            )}
+            {/* )} */}
           </Link>
           <Carousel />
           <Trademark />
