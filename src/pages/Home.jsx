@@ -48,10 +48,10 @@ function Home() {
               <motion.img
                 layoutId='mainlogo'
                 className={styles.logo}
-                variants={transition}
-                initial={value >= 4 && "initial"}
-                animate={value >= 4 && "enter"}
-                exit={value >= 4 && "exit"}
+                // variants={transition}
+                // initial={value >= 4 && "initial"}
+                // animate={value >= 4 && "enter"}
+                // exit={value >= 4 && "exit"}
                 src={Logo} alt='myLogo' />
             )}
           </Link>
