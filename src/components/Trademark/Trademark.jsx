@@ -10,7 +10,7 @@ function Trademark() {
   return (
     <motion.div className={styles.container}
       key="trademark"
-      initial={{ opacity: 1, y: -100 }}
+      initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 1.5, type: "spring", delay: 0.8 }}
 

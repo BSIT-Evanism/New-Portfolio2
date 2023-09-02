@@ -7,32 +7,19 @@ import { transition } from './animation';
 import Carousel from '../components/Carousel/Carousel';
 import Trademark from '../components/Trademark/Trademark';
 import { useState } from 'react';
-import Logo from '../assets/evan.svg'
 import HeroSection from '../components/HeroSection/HeroSection';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { IntroContext, NavbarContext } from '../context/navbarToggle';
+import AnimatedLogo from '../components/AnimatedLogo/AnimatedLogo';
 
 
 function Home() {
   const [hover, setHover] = useState(false)
-  // const [loader, setLoader] = useState(true)
-  const value = useContext(NavbarContext)
   const loader = useContext(IntroContext)
-  
-  // useEffect(() => {
-  //     if(value >= 4) {
-  //       setLoader(false)
-  //     }
-  //     setTimeout(() => {
-  //       setLoader(false)
-  //     }, 3000)
-      
-   
-  // },[])
+  const value = useContext(NavbarContext)
 
-  
   const handleChange = (param) => {
     setHover(param)
     
@@ -45,14 +32,25 @@ function Home() {
         <div className={styles.wrapper}>
           <Link to="/">
             {!loader && (
-              <motion.img
-                layoutId='mainlogo'
-                className={styles.logo}
-                // variants={transition}
-                // initial={value >= 4 && "initial"}
-                // animate={value >= 4 && "enter"}
-                // exit={value >= 4 && "exit"}
-                src={Logo} alt='myLogo' />
+              <motion.div
+              layoutId='mainlogo'
+
+            initial={value >= 4 && { y: "-100vh"} }
+            animate={value >= 4 && {
+                y: 0,
+                transition: {
+                    duration: 1.5, type: "spring", delay: 0.8
+                }
+            }}
+            exit={value >= 4 && {
+                y: "-100vh",
+                transition: {
+                    duration: 0.8, type: "spring"
+                }
+            }}
+              >
+                <AnimatedLogo />
+              </motion.div>
             )}
           </Link>
           <Carousel />
