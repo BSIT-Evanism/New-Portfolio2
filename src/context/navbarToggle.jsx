@@ -25,7 +25,7 @@ function IncrementLoc({ children }) {
   }, [pathname])
 
   useEffect(() => {
-    if(changeLoc >= 4) {
+    if(changeLoc >= 5) {
       setIntro(false)
     } else {
       setTimeout(() => {
