@@ -10,7 +10,7 @@ function Trademark() {
   return (
     <motion.div className={styles.container}
       key="trademark"
-      initial={{ y: -100 }}
+      initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ duration: 1.5, type: "spring", delay: 0.8 }}
 
@@ -18,7 +18,7 @@ function Trademark() {
       onMouseLeave={() => setHover(false)}
     >
       <motion.div
-        whileHover={{ y: -25 }}
+        whileHover={{ y: '-35px' }}
       >
         <h3 className={styles.trademark}
         >code by evan solanoy ©</h3>
