@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import styles from './Trademark.module.scss'
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
 
 function Trademark() {
-  const [hover, setHover] = useState(false)
+  const [, setHover] = useState(false)
 
   return (
     <motion.div className={styles.container}
       key="trademark"
-      initial={{ y: 100 }}
+      initial={{ y: "-100vh" }}
       animate={{ y: 0 }}
       transition={{ duration: 1.5, type: "spring", delay: 0.8 }}
 

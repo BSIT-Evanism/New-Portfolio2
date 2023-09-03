@@ -17,7 +17,7 @@
   3. Add accessible line-height
   4. Improve text rendering
 */
-jbody {
+body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -61,10 +61,9 @@ html::-webkit-scrollbar {
 }
 
 .logoIn {
-  position: absolute;
+  position: fixed;
   height: 50vh;
   width: 50vw;
-  z-index: 16;
   top: 20vh;
   left: 20vw;
   z-index: 20;

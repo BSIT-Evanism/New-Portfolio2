@@ -5,7 +5,7 @@ function LoadingBar() {
   
   return (
     <>
-    
+    <div className={styles.wrapper}>
       <motion.div className={styles.containerTop}
         initial={{ x: 0 }}
         exit={{ x: "200vw" }}
@@ -18,6 +18,7 @@ function LoadingBar() {
         transition={{ duration: 1.3, ease: [0.32, 0, 0.46, 1] }}
       >
       </motion.div>
+    </div>
 
     </>
   )

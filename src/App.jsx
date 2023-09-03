@@ -19,6 +19,7 @@ function App() {
     
     setTimeout(() => {
       setLoader(false)
+      window.scrollTo(0, 0)
     }, 3000)
 
   }, [])

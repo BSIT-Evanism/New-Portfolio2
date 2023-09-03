@@ -1,10 +1,16 @@
+.wrapper {
+  width: 100vw;
+  height: 2rem;
+  position: sticky;
+  top: 3vh;
+
+}
+
 .slidingText {
   position: relative;
   top: 0;
-  border: 2px solid black;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
+  border: 0 solid black;
+  border-top-width: 2px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -19,11 +25,8 @@
 .slidingText2 {
   position: relative;
   top: 0;
-  border: 2px solid black;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 2px solid black;
+  border: 0 solid black;
+  border-bottom-width: 2px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -38,6 +41,7 @@
   display: flex;
   gap: 50px;
   overflow: hidden;
+  background: white;
   
   p {
     overflow: hidden;

@@ -2,8 +2,6 @@ import Marquee from '../components/Marquee/Marquee';
 import Navbar from '../components/Navbar/Navbar';
 import Transition from '../components/Transition/Transition';
 import styles from './page-index.module.scss'
-import { motion, AnimatePresence } from 'framer-motion';
-import { transition } from './animation';
 import Carousel from '../components/Carousel/Carousel';
 import Trademark from '../components/Trademark/Trademark';
 import { useState } from 'react';
@@ -16,13 +14,14 @@ import AnimatedLogo from '../components/AnimatedLogo/AnimatedLogo';
 
 
 function Home() {
-  const [hover, setHover] = useState(false)
+  const [, setHover] = useState(false)
   const loader = useContext(IntroContext)
 
   useEffect(() => {
     (
       async () => {
         const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        // eslint-disable-next-line no-unused-vars
         const locomotiveScroll = new LocomotiveScroll();
       } 
     )()
@@ -48,10 +47,12 @@ function Home() {
           <Trademark />
         </div>
         <HeroSection />
+        <div className={styles.test}>
         <Marquee handleChange={handleChange} routeName="home">
           Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
         </Marquee>
-        <div className={styles.test}>test scroll</div>
+          test scroll
+        </div>
         <div className={styles.test}>test scroll</div>
       </Transition>
     </>

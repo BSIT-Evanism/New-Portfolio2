@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 
+// eslint-disable-next-line react/prop-types
 function MiniMarquee({ nameInput }) {
   return (
     <motion.div
@@ -27,6 +28,7 @@ function MiniMarquee({ nameInput }) {
   )
 }
 
+// eslint-disable-next-line react/prop-types
 function Marquee({ children, handleChange, routeName }) {
   const [hover, setHover] = useState(false)
 
@@ -38,6 +40,8 @@ function Marquee({ children, handleChange, routeName }) {
 
   return (
     <>
+      <div className={styles.wrapper}>
+
       <AnimatePresence mode="popLayout">
         {hover && (
 
@@ -96,6 +100,7 @@ function Marquee({ children, handleChange, routeName }) {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </>
   )
 }
