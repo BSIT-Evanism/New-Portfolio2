@@ -52,7 +52,7 @@ function Navbar() {
     >
       <AnimatePresence>
 
-        {value < 3 && (
+        {value < 2 && (
           !hover && (
             <Tooltip />
           )
@@ -65,12 +65,12 @@ function Navbar() {
         onHoverEnd={() => setHover(false)}
       >
         <AnimatePresence>
-          
+
 
           <Links key={"home"} locationName="home" loc="/" hover={hover} />
           <Links key={"about"} locationName="about" loc="/about" hover={hover} />
           <Links key={"projects"} locationName="Projects" loc="/projects" hover={hover} />
-          
+
         </AnimatePresence >
       </motion.div>
     </motion.div>

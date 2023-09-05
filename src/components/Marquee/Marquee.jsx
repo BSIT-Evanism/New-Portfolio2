@@ -40,67 +40,67 @@ function Marquee({ children, handleChange, routeName }) {
 
   return (
     <>
-      <div className={styles.wrapper}>
-
-      <AnimatePresence mode="popLayout">
-        {hover && (
-
-          <motion.div className={styles.slidingText}
-            key={"slidingText"}
-            initial={{ y: "5vh" }}
-            animate={{ y: 0 }}
-            exit={{ y: "5vh" }}
-            transition={{ duration: 0.3 }}
-
-          >
-            <MiniMarquee nameInput={routeName} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <motion.div className={styles.marquee}
-        key={"outer"}
-        layout
+      <motion.div className={styles.wrapper}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        transition={{ duration: 0.5 }}
       >
-        <motion.div
-          key={"inner"}
-          layout
-          className={styles.child}
-          animate={{ x: [0, -1590] }}
-          transition={{ repeat: Infinity, repeatType: "loop", duration: 20, ease: "linear" }}
-        >
 
-          <motion.div className={styles.nest}
-            key={"nest"}
-          >
-            <h1 className={styles.text}
-              key={"innerText"}
+        <AnimatePresence mode="popLayout">
+          {hover && (
+
+            <motion.div className={styles.slidingText}
+              key={"slidingText"}
+              initial={{ y: "5vh" }}
+              animate={{ y: 0 }}
+              exit={{ y: "5vh" }}
+              transition={{ duration: 0.8, type: "spring" }}
+
             >
-              {children}
-            </h1>
+              <MiniMarquee nameInput={routeName} />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
+        <motion.div className={styles.marquee}
+          key={"outer"}
+          layout
+          transition={{ duration: 0.5 }}
+        >
+          <motion.div
+            key={"inner"}
+            className={styles.child}
+            animate={{ x: [0, -1590] }}
+            transition={{ repeat: Infinity, repeatType: "loop", duration: 20, ease: "linear" }}
+          >
+
+            <motion.div className={styles.nest}
+              key={"nest"}
+            >
+              <h1 className={styles.text}
+                key={"innerText"}
+              >
+                {children}
+              </h1>
+
+            </motion.div>
           </motion.div>
         </motion.div>
+        <AnimatePresence mode="popLayout">
+
+          {hover && (
+
+            <motion.div className={styles.slidingText2}
+              initial={{ y: "-7vh" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-8vh" }}
+              transition={{ duration: 0.8, type: "spring" }}
+
+            >
+              <MiniMarquee nameInput="home" />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
-      <AnimatePresence mode="popLayout">
-
-        {hover && (
-
-          <motion.div className={styles.slidingText2}
-            initial={{ y: "-7vh" }}
-            animate={{ y: 0 }}
-            exit={{ y: "-7vh" }}
-            transition={{ duration: 0.4, ease: "linear" }}
-
-          >
-            <MiniMarquee nameInput="home" />
-          </motion.div>
-        )}
-      </AnimatePresence>
-      </div>
     </>
   )
 }
