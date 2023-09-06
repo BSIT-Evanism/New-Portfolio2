@@ -6,11 +6,13 @@ import { useLocation } from "react-router-dom";
 export const NavbarContext = createContext()
 export const IntroContext = createContext()
 
+
 function IncrementLoc({ children }) {
   const [changeLoc, setChangeLoc] = useState(0);
   const { pathname } = useLocation();
   const [location, changeLocation] = useState("")
   const [intro,setIntro] = useState(true);
+
 
   useEffect(() => {
     if (location === pathname) {
@@ -39,8 +41,7 @@ function IncrementLoc({ children }) {
   return (
     <NavbarContext.Provider value={changeLoc}>
       <IntroContext.Provider value={intro}>
-
-      {children}
+         {children}
       </IntroContext.Provider>
     </NavbarContext.Provider>
   )

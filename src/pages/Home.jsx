@@ -14,12 +14,13 @@ import AnimatedLogo from '../components/AnimatedLogo/AnimatedLogo';
 import NoticeBanner from '../components/NoticeBanner/NoticeBanner';
 import useMousePosition from '../utils/useMousePosition';
 import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 
 function Home() {
   const [, setHover] = useState(false)
   const loader = useContext(IntroContext)
-  const { x, y } = useMousePosition()
+  
 
   useEffect(() => {
     (
@@ -40,13 +41,11 @@ function Home() {
 
   return (
     <>
-      <motion.div
-        className={styles.cursor}
-        style={{ x, y }}
-        transition={{ type: "tween", ease: "backOut" }}
-      ></motion.div>
+      
       <Transition>
+        <AnimatePresence>
         <Navbar key={"home"} />
+        </AnimatePresence>
         <div className={styles.wrapper}>
           <Link to="/">
             {!loader && (

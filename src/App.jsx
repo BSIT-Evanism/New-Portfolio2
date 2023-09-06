@@ -7,10 +7,11 @@ import AnimatedNav from './components/AnimatedNav/AnimatedNav';
 import { BrowserRouter } from 'react-router-dom';
 import IncrementLoc from './context/navbarToggle.jsx';
 import logo from "./assets/evan.svg"
+import ViewContext from './context/ViewContext';
+import Cursor from './components/Cursor/Cursor';
 
 
 function App() {
-
   const [loader, setLoader] = useState(true)
 
   
@@ -26,6 +27,8 @@ function App() {
 
   return (
     <>
+      <Cursor />
+      
       <AnimatePresence>
         {loader && (
           <>
@@ -41,9 +44,10 @@ function App() {
         )}
       </AnimatePresence>
       <BrowserRouter>
-        <IncrementLoc>
-          
+        <IncrementLoc>     
+          <ViewContext>
           <AnimatedNav />
+          </ViewContext>
         </IncrementLoc>
       </BrowserRouter>
     </>

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Links from "../Links/Links";
 import { NavbarContext } from '../../context/navbarToggle';
 import { useContext } from 'react';
+import { useView } from '../../context/ViewContext';
 
 
 function Tooltip() {
@@ -33,9 +34,10 @@ function Tooltip() {
 function Navbar() {
   const [hover, setHover] = useState(false)
   const value = useContext(NavbarContext)
+  const viewValue = useView()
 
   const container = {
-    hidden: { y: "100vh" },
+    hidden: { y: "30vh" },
     show: {
       y: 0,
       transition: {
@@ -45,25 +47,32 @@ function Navbar() {
   }
 
   return (
-    <motion.div className={styles.wrapper}
+    <>
+    <AnimatePresence>
+    {!viewValue && (
+
+      <motion.div className={styles.wrapper}
       variants={container}
       initial="hidden"
       animate="show"
-    >
+      exit={{y: "30vh", transition: {
+        type: "spring", bounce: 0.2, damping: 20, mass: 2, velocity: 0.3
+      }}}
+      >
       <AnimatePresence>
 
         {value < 2 && (
           !hover && (
             <Tooltip />
-          )
-        )}
+            )
+            )}
       </AnimatePresence>
       <motion.div className={styles.nav}
         layoutId='innerNav'
         whileHover={{ width: 400, x: -100 }}
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
-      >
+        >
         <AnimatePresence>
 
 
@@ -74,6 +83,9 @@ function Navbar() {
         </AnimatePresence >
       </motion.div>
     </motion.div>
+        )}
+        </AnimatePresence>
+        </>
   )
 }
 

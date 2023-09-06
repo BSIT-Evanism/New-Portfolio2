@@ -10,6 +10,7 @@
   height: 90vh;
   justify-content: center;
   margin-bottom: 1rem;
+  margin-top: 8vh;
   transform-style: preserve-3d;
   
 
@@ -26,11 +27,11 @@
      &::before {
           content: "";
           inset: 0.75rem;
-          background: black;
+          background: #102C57;
           border-radius: inherit;
           position: absolute;
           opacity: 0.3;
-          filter: blur(25px);
+          filter: blur(55px);
           transform: translateZ(-80px);
         }
 
