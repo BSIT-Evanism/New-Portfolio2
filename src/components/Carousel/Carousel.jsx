@@ -1,10 +1,23 @@
+import { useRef } from 'react';
 import styles from './Carousel.module.scss'
 import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInViewUpdate, useView } from '../../context/ViewContext';
+
 
 
 function Carousel() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const setView = useInViewUpdate();
+
+  useEffect(() => {
+    setView(isInView)
+  }, [isInView])
+
   return (
-    <motion.ul className={styles.carousel}
+    <motion.ul ref={ref} className={styles.carousel}
       key="carousel"
       initial={{ y: "-100vh" }}
       animate={{ y: 0 }}

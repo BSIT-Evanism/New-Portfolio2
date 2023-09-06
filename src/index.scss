@@ -53,6 +53,7 @@ html {
       overflow-x: hidden;
       -ms-overflow-style: none;
       scrollbar-width: none;
+      cursor: none;
       
 }
 
@@ -68,4 +69,5 @@ html::-webkit-scrollbar {
   left: 20vw;
   z-index: 20;
 }
+
 
