@@ -44,10 +44,8 @@ function App() {
         )}
       </AnimatePresence>
       <BrowserRouter>
-        <IncrementLoc>     
-          <ViewContext>
+        <IncrementLoc>       
           <AnimatedNav />
-          </ViewContext>
         </IncrementLoc>
       </BrowserRouter>
     </>

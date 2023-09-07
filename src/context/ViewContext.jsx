@@ -33,8 +33,8 @@ export default function ViewContext({children}) {
       <InViewUpdateContext.Provider value={setInView}>
         <HoverContext.Provider value={hover}>
           <HoverUpdateContext.Provider value={setHover}>
-        {children}
-        </HoverUpdateContext.Provider>
+           {children}
+          </HoverUpdateContext.Provider>
         </HoverContext.Provider>
       </InViewUpdateContext.Provider>
     </InViewContext.Provider>

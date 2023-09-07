@@ -3,24 +3,23 @@ import useMousePosition from '../../utils/useMousePosition'
 import { motion } from 'framer-motion'
 import styles from './Cursor.module.scss'
 import { AnimatePresence } from 'framer-motion'
+import { useHover } from '../../context/ViewContext'
 
 export default function Cursor() {
-    
+    const hover = useHover()
     const { x, y } = useMousePosition()
+
+    const size = hover ? 5.5 : 1.5;
   return (
     <>
    
-        <AnimatePresence>
+        
 
         <motion.div
         className={styles.cursor}
-        style={{ x, y }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        animate={{ x: x, y: y, scale: size }}
         transition={{ type: "tween", ease: "backOut" }}
         ></motion.div>
-        </AnimatePresence>
         
         </>
   )

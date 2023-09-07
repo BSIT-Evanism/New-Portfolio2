@@ -1,24 +1,23 @@
 .logoContainer {
   display: flex;
-  
+
   width: fit-content;
   height: auto;
   position: relative;
 }
 
 .logo {
-    padding: 0 50px 0 50px;
-      height: 50px;
-      width: auto;
-      min-height: 50px;
-      z-index: 18;
-      
-    }
-    
-    
-    .cursor {
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      position: absolute;
-    }
+  padding: 0 50px 0 50px;
+  height: 50px;
+  width: auto;
+  min-height: 50px;
+  z-index: 18;
+  cursor: none;
+}
+
+.cursor {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+}
