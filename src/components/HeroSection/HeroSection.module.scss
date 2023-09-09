@@ -15,8 +15,8 @@
   
 
   .hero {
-    width: 70%;
-    height: 70%;
+    width: fit-content;
+    height: fit-content;
     margin-top: 0.5rem;
     display: flex;
     justify-content: flex-end;
@@ -37,8 +37,8 @@
 
     .inner {
       position: relative;
-      width: 80%;
-      height: 100%;
+      width: 65rem;
+      height: 40rem;
       border-radius: 20px;
       background: white;
       box-shadow: 5px 5px 20px #F8F0E5;
@@ -56,6 +56,50 @@
         z-index: 10;
 
              }
+      .callfloat {
+        position: absolute;
+        border-radius: 50px;
+        bottom: -10%;
+        right: -15%;
+        width: 30%;
+        height: 15%;
+        box-shadow: 5px 5px 20px #F8F0E5;
+        --webkit-backface-visibility: hidden;
+        background: white;
+        z-index: 10;
+
+    .ping {
+      background: white;
+      position: absolute;
+      top: 10px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+
+        .innerPing {
+          width: 15px;
+          height: 15px;
+          border-radius: 2rem;
+          background: green;
+          animation: 1.5s linear 0.5s infinite pulse;
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+        }
+    }
+
+      }
     }
   }
 }

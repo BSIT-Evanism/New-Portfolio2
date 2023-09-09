@@ -63,11 +63,12 @@ function Marquee({ children, handleChange, routeName }) {
 
         <motion.div className={styles.marquee}
           key={"outer"}
-          layout
+          layoutId="marquee"
           transition={{ duration: 0.5 }}
         >
           <motion.div
             key={"inner"}
+            layout
             className={styles.child}
             animate={{ x: [0, -1590] }}
             transition={{ repeat: Infinity, repeatType: "loop", duration: 20, ease: "linear" }}

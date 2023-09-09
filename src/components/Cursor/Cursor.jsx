@@ -9,18 +9,15 @@ export default function Cursor() {
     const hover = useHover()
     const { x, y } = useMousePosition()
 
-    const size = hover ? 5.5 : 1.5;
+    const size = hover ? 3 : 0.8;
   return (
     <>
-   
-        
-
-        <motion.div
-        className={styles.cursor}
-        animate={{ x: x, y: y, scale: size }}
-        transition={{ type: "tween", ease: "backOut" }}
-        ></motion.div>
-        
-        </>
-  )
+      <motion.div
+      className={styles.cursor}
+      style={{x ,y}} 
+      animate={{ scale: size }}
+      transition={{ type: "tween", ease: "backOut" }}
+      ></motion.div>
+    </>
+  );
 }

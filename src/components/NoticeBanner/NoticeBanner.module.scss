@@ -2,11 +2,11 @@
 
 .banner {
   border-left: 0;
-  border-radius: 0 50px 50px 0;
-  width: 15vw;
-  height: 13vh;
+  border-radius: 0 60px 0 0;
+  width: 15rem;
+  height: 6rem;
   left: 0;
-  top: 20vh;
+  bottom: 0;
   position: fixed;
   z-index: 5;
   background: #102C57;
@@ -19,21 +19,41 @@
   }
 
   .circle {
-    height: 100%;
-    width: 45%;
+    min-height: 100px;
+    min-width: 100px;
     background: #F8F0E5;
-    border-radius: 3rem;
+    border-radius: 50px;
 
     .ping {
-      
-      &__inner {
-        width: 20%;
-        height: 20%;
-        border-radius: 2rem;
-        background: blue;
-        stroke: #F8F0E5;
-        stroke-width: 10px;
-      }
+      background: white;
+      position: absolute;
+      top: 23px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+
+        .innerPing {
+          width: 15px;
+          height: 15px;
+          border-radius: 2rem;
+          background: green;
+          animation: 1.5s linear 0.5s infinite pulse;
+
+        }
     }
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
   }
 }

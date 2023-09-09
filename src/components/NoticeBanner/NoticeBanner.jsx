@@ -7,11 +7,6 @@ function NoticeBanner({ children }) {
         WIP portfolio<br />
         (check github for details)
       </h6>
-      <div className={styles.circle}>
-        <div className={styles.ping}>
-          <div className={styles.ping__inner}></div>
-        </div>
-      </div>
     </div >
   )
 

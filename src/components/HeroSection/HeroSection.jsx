@@ -21,6 +21,13 @@ function HeroSection() {
           >
             <motion.div data-scroll data-scroll-speed="0.2" className={styles.float}
             ></motion.div>
+            <motion.div data-scroll data-scroll-speed="0.1" className={styles.callfloat}
+            >
+              <div className={styles.ping}>
+                <div className={styles.innerPing}/>
+              </div>
+
+            </motion.div>
           </motion.div>
         </motion.div>
       </motion.div>

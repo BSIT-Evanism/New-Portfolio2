@@ -36,7 +36,6 @@ function Home() {
 
   const handleChange = (param) => {
     setHover(param)
-
   }
 
   return (
@@ -59,7 +58,7 @@ function Home() {
         <HeroSection />
         <div className={styles.test}>
           <Marquee handleChange={handleChange} routeName="home">
-            Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
+            Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything Welcome to my Portfolio - I am a developer without fear on using future tech to achieve anything
           </Marquee>
           test scroll
         </div>
