@@ -2,7 +2,6 @@ import styles from './Navbar.module.scss'
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
 import Links from "../Links/Links";
 import { NavbarContext } from '../../context/navbarToggle';
 import { useContext } from 'react';
@@ -68,10 +67,12 @@ function Navbar() {
             )}
       </AnimatePresence>
       <motion.div className={styles.nav}
-        layoutId='innerNav'
-        whileHover={{ width: 400, x: -100 }}
+        layoutId="navbar"
+        animate={hover ? {width: 400, x: -100} : {width: 200, x: 0}}
+        // whileHover={{ width: 400, x: -100 }}
         onHoverStart={() => setHover(true)}
         onHoverEnd={() => setHover(false)}
+                  transition={{duration: 0.5, type: "tween", ease: "backOut"}}
         >
         <AnimatePresence>
 
