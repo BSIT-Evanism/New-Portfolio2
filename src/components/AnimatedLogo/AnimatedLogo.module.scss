@@ -4,6 +4,9 @@
   width: fit-content;
   height: auto;
   position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .logo {
@@ -21,3 +24,11 @@
   z-index: 1;
   position: absolute;
 }
+
+.border {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border: 3px solid #102C57;
+    border-radius: 50px;
+  }

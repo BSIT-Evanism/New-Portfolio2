@@ -24,7 +24,7 @@ export function useHoverUpdate() {
 
 
 
-export default function ViewContext({children}) {
+export default function ViewContext({ children }) {
   const [inView, setInView] = useState(false)
   const [hover, setHover] = useState(false)
 
@@ -33,7 +33,7 @@ export default function ViewContext({children}) {
       <InViewUpdateContext.Provider value={setInView}>
         <HoverContext.Provider value={hover}>
           <HoverUpdateContext.Provider value={setHover}>
-           {children}
+            {children}
           </HoverUpdateContext.Provider>
         </HoverContext.Provider>
       </InViewUpdateContext.Provider>
