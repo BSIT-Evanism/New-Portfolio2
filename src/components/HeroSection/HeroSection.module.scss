@@ -13,8 +13,6 @@
   margin-top: 8vh;
 
 
-
-
   .hero {
     width: fit-content;
     height: fit-content;
@@ -76,92 +74,91 @@
         left: -20%;
         width: 30%;
         height: 80%;
-        --webkit-backface-visibility: hidden;
         z-index: 10;
-        border: 1px solid red;
+
 
         .float {
-         position: fixed;
-        border-radius: 20px;
-        top: 10%;
-        left: -20%;
-        width: 30%;
-        height: 80%;
-        box-shadow: 5px 5px 20px #F8F0E5;
-        --webkit-backface-visibility: hidden;
-        background: white;
-        z-index: 10;
-
- 
-
-
-        &::before {
-          content: "";
-          border: #102C57 solid 2px;
-          position: absolute;
-          inset: 0.75rem;
-          border-radius: 10px;
-          filter: blur(0.5px);
-          opacity: 0.5;
-        }
-
-
-      .callFloat {
-        position: absolute;
-        border-radius: 50px;
-        bottom: -10%;
-        right: -15%;
-        width: 30%;
-        height: 15%;
-        box-shadow: 5px 5px 20px #F8F0E5;
-        --webkit-backface-visibility: hidden;
-        background: white;
-        z-index: 10;
-
-
-        &::before {
-          content: "";
-          border: #102C57 solid 2px;
-          position: absolute;
-          inset: 0.4rem;
-          border-radius: 60px;
-          opacity: 0.5;
-        }
-
-        .ping {
+          position: fixed;
+          border-radius: 20px;
+          top: 10%;
+          left: -20%;
+          width: 30%;
+          height: 80%;
+          box-shadow: 5px 5px 20px #F8F0E5;
+          --webkit-backface-visibility: hidden;
           background: white;
-          position: absolute;
-          top: 10px;
-          width: 30px;
-          height: 30px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50px;
+          z-index: 10;
 
-          .innerPing {
-            width: 15px;
-            height: 15px;
-            border-radius: 2rem;
-            background: green;
-            animation: 1.5s cubic-bezier(0.76, 0, 0.55, 0.75) 0.5s infinite pulse;
 
-            @keyframes pulse {
-              from {
-                transform: scale(1);
-                opacity: 1
-              }
-              to {
-                transform: scale(1.5);
-                opacity: 0;
-              }
-            }
-            }
+          &::before {
+            content: "";
+            border: #102C57 solid 2px;
+            position: absolute;
+            inset: 0.75rem;
+            border-radius: 10px;
+            filter: blur(0.5px);
+            opacity: 0.5;
           }
         }
       }
 
-      }
+
+        .callFloat {
+          position: absolute;
+          border-radius: 50px;
+          bottom: -10%;
+          right: -15%;
+          width: 30%;
+          height: 15%;
+          box-shadow: 5px 5px 20px #F8F0E5;
+          --webkit-backface-visibility: hidden;
+          background: white;
+          z-index: 10;
+
+
+          &::before {
+            content: "";
+            border: #102C57 solid 2px;
+            position: absolute;
+            inset: 0.4rem;
+            border-radius: 60px;
+            opacity: 0.5;
+          }
+
+          .ping {
+            background: white;
+            position: absolute;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+
+            .innerPing {
+              width: 15px;
+              height: 15px;
+              border-radius: 2rem;
+              background: green;
+              animation: 1.5s cubic-bezier(0.76, 0, 0.55, 0.75) 0.5s infinite pulse;
+
+              @keyframes pulse {
+                from {
+                  transform: scale(1);
+                  opacity: 1
+                }
+                to {
+                  transform: scale(1.5);
+                  opacity: 0;
+                }
+              }
+            }
+          }
+        }
+
+
+
     }
   }
 }
