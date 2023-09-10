@@ -11,6 +11,8 @@
   justify-content: center;
   margin-bottom: 1rem;
   margin-top: 8vh;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 
 
   .hero {
@@ -20,8 +22,10 @@
     display: flex;
     justify-content: flex-end;
     transform-origin: center;
-    perspective: 1000px;
+    perspective-origin: center;
     transform-style: preserve-3d;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+
 
 
     //&::before {
@@ -49,10 +53,10 @@
 
     .inner {
       position: relative;
-      max-width: 80vw;
-      min-width: 45rem;
-      max-height: 40rem;
-      min-height: 25rem;
+      width: 60vw;
+      min-width: 40vw;
+      height: 33vw;
+      min-height: 5rem;
       border-radius: 50px;
       background: white;
       box-shadow: 5px 5px 20px #F8F0E5;
@@ -79,9 +83,12 @@
         z-index: 10;
 
 
+
         .float {
+
+        transform-origin: center;
           position: fixed;
-          border-radius: 20px;
+          border-radius: 40px;
           top: 10%;
           left: -20%;
           width: 30%;
@@ -90,17 +97,21 @@
           --webkit-backface-visibility: hidden;
           background: white;
           z-index: 10;
-
+          transition: 400ms ease;
 
           &::before {
             content: "";
             border: #102C57 solid 2px;
             position: absolute;
             inset: 0.75rem;
-            border-radius: 10px;
+            border-radius: 30px;
             filter: blur(0.5px);
             opacity: 0.5;
           }
+        }
+
+        .flow {
+          transform: rotateY(180deg);
         }
       }
 
