@@ -49,8 +49,10 @@
 
     .inner {
       position: relative;
-      width: 65rem;
-      height: 40rem;
+      max-width: 80vw;
+      min-width: 45rem;
+      max-height: 40rem;
+      min-height: 25rem;
       border-radius: 50px;
       background: white;
       box-shadow: 5px 5px 20px #F8F0E5;

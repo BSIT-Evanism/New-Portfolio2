@@ -14,14 +14,13 @@ export default function Cursor() {
   const size = hover ? 3 : 0.8;
   return (
     <>
-      {!hover && (
-        <motion.div
-          layoutId="logoCursor"
-          className={styles.cursor}
-          animate={{ scale: size, x, y }}
-          transition={{ type: "tween", ease: "backOut" }}
-        ></motion.div>
-      )}
+      <motion.div
+        layoutId="logoCursor"
+        className={styles.cursor}
+        style={{ x, y }}
+        animate={{ scale: size }}
+        transition={{ type: "tween", ease: "backOut" }}
+      ></motion.div>
     </>
   );
 }

@@ -10,9 +10,6 @@ function useMousePosition() {
 
   useEffect(() => {
     window.addEventListener("mousemove", updateMousePosition)
-    return () => {
-      window.addEventListener("mousemove", updateMousePosition)
-    }
   }, [])
 
   return mousePosition;
