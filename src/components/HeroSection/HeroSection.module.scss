@@ -11,7 +11,7 @@
   justify-content: center;
   margin-bottom: 1rem;
   margin-top: 8vh;
-  margin-left: 10vw;
+  margin-left: 12vw;
   transform-style: preserve-3d;
   perspective: 1000px;
 
@@ -26,6 +26,10 @@
     perspective-origin: center;
     transform-style: preserve-3d;
     transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+
+      &:has(:hover) > .inner > .contain > .float, .floatBack {
+        transform: rotateY(180deg);
+      }
 
 
 
@@ -75,8 +79,9 @@
       }
 
 
+
       .contain {
-        position: fixed;
+        position: absolute;
         top: 10%;
         left: -20%;
         width: 30%;
@@ -84,19 +89,29 @@
         z-index: 10;
 
         .float {
-          position: fixed;
+          position: absolute;
           border-radius: 40px;
-          top: 10%;
-          left: -20%;
-          width: 30%;
-          height: 80%;
+          // top: 10%;
+          // left: -8%;
+          width: 100%;
+          height: 90%;
           box-shadow: 5px 5px 20px #F8F0E5;
-          --webkit-backface-visibility: hidden;
           background: white;
           z-index: 10;
+          -webkit-backface-visibility: hidden;
           transition: 500ms ease;
           transform-origin: center;
           transform: translateZ(550px) perspective(1000px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .heroText {
+            position: absolute;
+            text-transform: uppercase;
+            scale: 2.5;
+            left: 100%;
+          }
 
           &::before {
             content: "";
@@ -107,12 +122,18 @@
             filter: blur(0.5px);
             opacity: 0.5;
           }
+
+          
         }
+
+        
+
 
         .flow {
           transform: rotateY(180deg);
         }
-      }
+
+            }
 
 
         .callFloat {
@@ -175,4 +196,27 @@
   }
 }
 
+.floatBack {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background: red;
+  border-radius: 40px;
+  z-index: 9;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center;
+  transition: 500ms ease;
+  -webkit-backface-visibility: hidden;
+  // top: 10%;
+  // left: -8%;
+  box-shadow: 5px 5px 20px #F8F0E5;
+  background: white;
+  transform: translateZ(550px) perspective(1000px);
+}
+
+.flowBack {
+  z-index: 11;
+  transform: rotateY(180deg) perspective(2000px);
+}
 

@@ -47,46 +47,48 @@ function Navbar() {
 
   return (
     <>
-    <AnimatePresence>
-    {!viewValue && (
-
-      <motion.div className={styles.wrapper}
-      variants={container}
-      initial="hidden"
-      animate="show"
-      exit={{y: "30vh", transition: {
-        type: "spring", bounce: 0.2, damping: 20, mass: 2, velocity: 0.3
-      }}}
-      >
       <AnimatePresence>
+        {!viewValue && (
 
-        {value < 2 && (
-          !hover && (
-            <Tooltip />
-            )
-            )}
-      </AnimatePresence>
-      <motion.div className={styles.nav}
-        layoutId="navbar"
-        animate={hover ? {width: 400, x: -100} : {width: 200, x: 0}}
-        // whileHover={{ width: 400, x: -100 }}
-        onHoverStart={() => setHover(true)}
-        onHoverEnd={() => setHover(false)}
-                  transition={{duration: 0.5, type: "tween", ease: "backOut"}}
-        >
-        <AnimatePresence>
+          <motion.div className={styles.wrapper}
+            variants={container}
+            initial="hidden"
+            animate="show"
+            exit={{
+              y: "30vh", transition: {
+                type: "spring", bounce: 0.2, damping: 20, mass: 2, velocity: 0.3
+              }
+            }}
+          >
+            <AnimatePresence>
+
+              {value < 2 && (
+                !hover && (
+                  <Tooltip />
+                )
+              )}
+            </AnimatePresence>
+            <motion.div className={styles.nav}
+              layoutId="navbar"
+              animate={hover ? { width: 400, x: -100 } : { width: 200, x: 0 }}
+              // whileHover={{ width: 400, x: -100 }}
+              onHoverStart={() => setHover(true)}
+              onHoverEnd={() => setHover(false)}
+              transition={{ duration: 0.5, type: "tween", ease: "backOut" }}
+            >
+              <AnimatePresence>
 
 
-          <Links key={"home"} locationName="home" loc="/" hover={hover} />
-          <Links key={"about"} locationName="about" loc="/about" hover={hover} />
-          <Links key={"projects"} locationName="Projects" loc="/projects" hover={hover} />
+                <Links key={"home"} locationName="home" loc="/" hover={hover} />
+                <Links key={"about"} locationName="about" loc="/about" hover={hover} />
+                <Links key={"projects"} locationName="Projects" loc="/projects" hover={hover} />
 
-        </AnimatePresence >
-      </motion.div>
-    </motion.div>
+              </AnimatePresence >
+            </motion.div>
+          </motion.div>
         )}
-        </AnimatePresence>
-        </>
+      </AnimatePresence>
+    </>
   )
 }
 

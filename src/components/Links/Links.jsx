@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import styles from './Links.module.scss'
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 
 function Trans({ children, loc }) {
   return (
