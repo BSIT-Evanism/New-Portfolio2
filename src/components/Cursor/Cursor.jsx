@@ -9,19 +9,19 @@ export default function Cursor() {
     const hover  = useHover()
     const {mousePosition} = useMousePosition()
 
-
+    
     const size = hover ? 3 : 0.8;
-    return (
-        <>
-            {!hover && (
-                <motion.div
-                    layoutId="logoCursor"
-                    className={styles.cursor}
-                    style={{x: mousePosition.x, y: mousePosition.y}}
+  return (
+    <>
+{!hover && (
+      <motion.div
+layoutId="logoCursor"
+        className={styles.cursor}
+        style={{x: mousePosition.x, y: mousePosition.y}}
                     animate={{scale: size}}
-                    transition={{type: "tween", ease: "backOut"}}
-                ></motion.div>
-            )}
-        </>
-    );
+        transition={{type: "tween", ease: "backOut"}}
+      ></motion.div>
+)}
+    </>
+  );
 }
