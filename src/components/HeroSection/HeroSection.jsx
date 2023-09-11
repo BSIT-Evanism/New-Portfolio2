@@ -56,17 +56,11 @@ function HeroSection() {
             >
               <div className={`${styles.float}`}
               >
-                <motion.h1 className={styles.heroText}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
+                <h1 className={styles.heroText}
                 >
                   Evan <br />
                   Solanoy
-                </motion.h1>
-              </div>
-              <div className={`${styles.floatBack} ${hover && (styles.flowBack)}`}
-              >
+                </h1>
               </div>
             </div>
             <motion.div className={styles.callFloat}

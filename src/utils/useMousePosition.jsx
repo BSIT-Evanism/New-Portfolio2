@@ -14,8 +14,8 @@ function useMousePosition() {
     const y = e.clientY;
     const middleX = window.innerWidth / 2;
     const middleY = window.innerHeight / 2;
-    const offsetX = ((x - middleX) / middleX) * 30;
-    const offsetY = ((y - middleY) / middleY) * 30;
+    const offsetX = ((x - middleX) / middleX) * 20;
+    const offsetY = ((y - middleY) / middleY) * 20;
     setMouseTilt({xDeg: offsetY, yDeg: offsetX})
   }
 
