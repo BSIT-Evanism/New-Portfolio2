@@ -6,11 +6,12 @@
 
 .wrapper {
   display: flex;
-  width: 100vw;
+  width: 80vw;
   height: 90vh;
   justify-content: center;
   margin-bottom: 1rem;
   margin-top: 8vh;
+  margin-left: 10vw;
   transform-style: preserve-3d;
   perspective: 1000px;
 
@@ -82,11 +83,7 @@
         height: 80%;
         z-index: 10;
 
-
-
         .float {
-
-        transform-origin: center;
           position: fixed;
           border-radius: 40px;
           top: 10%;
@@ -97,7 +94,9 @@
           --webkit-backface-visibility: hidden;
           background: white;
           z-index: 10;
-          transition: 400ms ease;
+          transition: 500ms ease;
+          transform-origin: center;
+          transform: translateZ(550px) perspective(1000px);
 
           &::before {
             content: "";
