@@ -6,11 +6,12 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+
+  padding: 20px 50px 20px 50px;
 }
 
 .logo {
-  padding: 0 50px 0 50px;
+  // padding: 0 50px 0 50px;
   height: 50px;
   width: auto;
   min-height: 50px;
@@ -26,9 +27,9 @@
 }
 
 .border {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    border: 3px solid #102C57;
-    border-radius: 50px;
-  }
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  border: 3px solid #102c57;
+  border-radius: 50px;
+}

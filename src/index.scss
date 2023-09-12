@@ -1,9 +1,10 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /*
@@ -12,7 +13,6 @@
 * {
   margin: 0;
   // border: 1px solid red;
-
 }
 /*
   Typographic tweaks!
@@ -26,37 +26,50 @@ body {
 /*
   5. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /*
   6. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /*
   7. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
- overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 /*
   8. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 html {
-      font-family: 'Poppins', sans-serif;
-      background: #F8F0E5;
-      overflow-x: hidden;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      cursor: none;
-      
+  font-family: "Poppins", sans-serif;
+  background: #f8f0e5;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: none;
 }
 
 html::-webkit-scrollbar {
@@ -71,5 +84,3 @@ html::-webkit-scrollbar {
   left: 20vw;
   z-index: 20;
 }
-
-

@@ -1,13 +1,19 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { useMotionValue } from "framer-motion";
 
 function useMousePosition() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [mouseTilt, setMouseTilt] = useState({xDeg: 0, yDeg: 0})
+  const [mouseTilt, setMouseTilt] = useState({ xDeg: 0, yDeg: 0 });
+  const mousePosition = {
+    x: useMotionValue(0),
+    y: useMotionValue(0),
+  };
 
   const updateMousePosition = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY })
-  }
+    const { clientX, clientY } = e;
+    mousePosition.x.set(clientX);
+    mousePosition.y.set(clientY);
+  };
 
   const updateMouseTilt = (e) => {
     const x = e.clientX;
@@ -16,17 +22,15 @@ function useMousePosition() {
     const middleY = window.innerHeight / 2;
     const offsetX = ((x - middleX) / middleX) * 20;
     const offsetY = ((y - middleY) / middleY) * 20;
-    setMouseTilt({xDeg: offsetY, yDeg: offsetX})
-  }
+    setMouseTilt({ xDeg: offsetY, yDeg: offsetX });
+  };
 
   useEffect(() => {
-    window.addEventListener("mousemove", updateMousePosition)
-    window.addEventListener("mousemove", updateMouseTilt)
+    window.addEventListener("mousemove", updateMousePosition);
+    window.addEventListener("mousemove", updateMouseTilt);
+  }, []);
 
-  }, [])
-
-  return {mousePosition, mouseTilt};
-
+  return { mousePosition, mouseTilt };
 }
 
 export default useMousePosition;

@@ -1,32 +1,30 @@
-import React from 'react'
-import { createContext, useContext, useState } from 'react'
+import React from "react";
+import { createContext, useContext, useState } from "react";
 
-const InViewContext = createContext()
-const InViewUpdateContext = createContext()
-const HoverContext = createContext()
-const HoverUpdateContext = createContext()
+const InViewContext = createContext();
+const InViewUpdateContext = createContext();
+const HoverContext = createContext();
+const HoverUpdateContext = createContext();
 
 export function useView() {
-  return useContext(InViewContext)
+  return useContext(InViewContext);
 }
 
 export function useInViewUpdate() {
-  return useContext(InViewUpdateContext)
+  return useContext(InViewUpdateContext);
 }
 
 export function useHover() {
-  return useContext(HoverContext)
+  return useContext(HoverContext);
 }
 
 export function useHoverUpdate() {
-  return useContext(HoverUpdateContext)
+  return useContext(HoverUpdateContext);
 }
 
-
-
 export default function ViewContext({ children }) {
-  const [inView, setInView] = useState(false)
-  const [hover, setHover] = useState(false)
+  const [inView, setInView] = useState(false);
+  const [hover, setHover] = useState(false);
 
   return (
     <InViewContext.Provider value={inView}>
@@ -38,6 +36,5 @@ export default function ViewContext({ children }) {
         </HoverContext.Provider>
       </InViewUpdateContext.Provider>
     </InViewContext.Provider>
-  )
+  );
 }
-

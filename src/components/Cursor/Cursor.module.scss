@@ -1,10 +1,32 @@
+.cursorWrapper {
+  height: fit-content;
+  width: fit-content;
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cursor {
-    height: 20px;
-    width: 20px;
-    background: #102C57;
-    position: fixed;
-    opacity: 0.5;
-    border-radius: 20px;
-    pointer-events: none;
-    z-index: 5;
-  }
+  height: 20px;
+  width: 20px;
+  background: #102c57;
+  position: fixed;
+  opacity: 0.5;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.cursorBorder {
+  height: 40px;
+  width: 40px;
+  border: 2px solid #102c57;
+  position: fixed;
+  opacity: 0.5;
+  border-radius: 40px;
+  pointer-events: none;
+  z-index: 5;
+}
