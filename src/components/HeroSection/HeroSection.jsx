@@ -71,7 +71,11 @@ function HeroSection() {
                 </h1>
               </div>
             </div>
-            <motion.div className={styles.callFloat}>
+            <motion.div
+              className={styles.callFloat}
+              drag="x"
+              dragConstraints={{ left: 0, right: 300, top: 0, bottom: 0 }}
+            >
               <div className={styles.ping}>
                 <div className={styles.innerPing} />
               </div>
