@@ -9,13 +9,13 @@ function LoadingBar() {
           className={styles.containerTop}
           initial={{ x: 0 }}
           exit={{ x: "200vw" }}
-          transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 2, ease: [0.19, 0.78, 0.25, 0.855] }}
         ></motion.div>
         <motion.div
           className={styles.containerBottom}
           initial={{ x: 0 }}
           exit={{ x: "-300vh" }}
-          transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 2, ease: [0.19, 0.78, 0.25, 0.855] }}
         ></motion.div>
       </div>
     </>
