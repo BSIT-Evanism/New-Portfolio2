@@ -18,7 +18,8 @@
     position: absolute;
     border-radius: inherit;
     inset: 0.4rem;
-    z-index: 6;
+    z-index: 11;
+    pointer-events: none;
   }
 }
 
@@ -32,18 +33,20 @@
   padding: 20px 30px;
   border-radius: 40px;
   position: absolute;
-  // overflow: hidden;
+  overflow: hidden;
   transform-origin: center;
   background: white;
-  z-index: 5;
+  z-index: 10;
 }
 
 .bar {
   position: absolute;
-  background: #dac0a3;
+  background: #102c577a;
   width: 100%;
   height: 100%;
   transform-origin: left;
+  cursor: none;
+  pointer-events: none;
 
   &::before {
     content: "";
@@ -59,7 +62,7 @@
   bottom: 15vh;
   left: 45vw;
   z-index: 4;
-  cursor: none;
+  // cursor: none;
 }
 
 .tooltip {
