@@ -1,15 +1,16 @@
-import styles from "./NoticeBanner.module.scss"
+import styles from "./NoticeBanner.module.scss";
 
 function NoticeBanner({ children }) {
   return (
     <div className={styles.banner}>
       <h6>
-        WIP portfolio<br />
-        (check github for details)
+        WIP portfolio
+        <br />
+        <span>(check github for details)</span>
       </h6>
-    </div >
-  )
-
+      <div className={styles.hidden}>Check my bento instead</div>
+    </div>
+  );
 }
 
 export default NoticeBanner;

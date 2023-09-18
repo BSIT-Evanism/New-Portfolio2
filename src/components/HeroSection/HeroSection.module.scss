@@ -187,3 +187,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    display: none;
+    background: red;
+  }
+}
