@@ -12,8 +12,6 @@ import { useContext } from "react";
 import { IntroContext } from "../context/navbarToggle";
 import AnimatedLogo from "../components/AnimatedLogo/AnimatedLogo";
 import NoticeBanner from "../components/NoticeBanner/NoticeBanner";
-import useMousePosition from "../utils/useMousePosition";
-import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import IntroSection from "../components/IntroSection/IntroSection";
 
@@ -42,7 +40,7 @@ function Home() {
         <div className={styles.wrapper}>
           <Link to="/">{!loader && <AnimatedLogo />}</Link>
           <Carousel />
-          <Trademark />
+          {/* <Trademark /> */}
         </div>
         <NoticeBanner />
         <HeroSection />

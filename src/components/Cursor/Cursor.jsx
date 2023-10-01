@@ -9,23 +9,21 @@ export default function Cursor() {
   const hover = useHover();
   const { mousePosition } = useMousePosition();
 
-  const size = hover ? 3 : 0.8;
-  const sizeVar = hover ? 2 : 0;
+  const size = hover ? 4 : 0.8;
+  const sizeVar = hover ? 3 : 0;
 
   return (
     <>
       <motion.div className={styles.cursorWrapper}>
         <AnimatePresence>
           <motion.div
-            layoutId="cursorLogo"
             className={styles.cursor}
             style={{ x: mousePosition.x, y: mousePosition.y }}
-            animate={{ scale: size, opacity: hover ? 0 : 0.8 }}
+            animate={{ scale: size, opacity: hover ? 0.5 : 0.8 }}
           ></motion.div>
         </AnimatePresence>
         {hover && (
           <motion.div
-            layout
             className={styles.cursor}
             style={{ x: mousePosition.x, y: mousePosition.y }}
             animate={{ scale: sizeVar }}

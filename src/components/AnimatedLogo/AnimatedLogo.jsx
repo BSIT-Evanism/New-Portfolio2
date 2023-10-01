@@ -2,13 +2,11 @@ import styles from "./AnimatedLogo.module.scss";
 import Logo from "../../assets/evan.svg";
 import { motion } from "framer-motion";
 import { useHoverUpdate, useHover } from "../../context/ViewContext";
-import { AnimatePresence, useMotionValue } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import useMousePosition from "../../utils/useMousePosition";
 
 export default function AnimatedLogo() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const hover = useHover();
   const setHover = useHoverUpdate();
   const ref = useRef(null);
 
@@ -33,9 +31,6 @@ export default function AnimatedLogo() {
       >
         <div className={styles.logoContainer}>
           <AnimatePresence>
-            {hover && (
-              <motion.div layoutId="cursorLogo" className={styles.border} />
-            )}
             <motion.img
               ref={ref}
               animate={{ x: position.x, y: position.y }}

@@ -15,6 +15,11 @@
   transform-style: preserve-3d;
   perspective: 1000px;
 
+  @media (max-width: 768px) {
+    display: none;
+
+  }
+
   .hero {
     width: fit-content;
     height: fit-content;
@@ -26,11 +31,11 @@
     transform-style: preserve-3d;
     transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
 
-    &:has(:hover) > .inner > .contain > .float > .heroText {
+    &:has(:hover)>.inner>.contain>.float>.heroText {
       opacity: 1;
     }
 
-    &:has(:hover) > .inner > .contain > .float {
+    &:has(:hover)>.inner>.contain>.float {
       transform: rotateY(180deg);
     }
 
@@ -45,7 +50,7 @@
     //  transform: translateZ(-80px);
     //}
 
-    &:has(:hover) > .inner {
+    &:has(:hover)>.inner {
       &::before {
         content: "";
         border: #102c57 solid 2px;
@@ -168,14 +173,14 @@
             height: 15px;
             border-radius: 2rem;
             background: green;
-            animation: 1.5s cubic-bezier(0.76, 0, 0.55, 0.75) 0.5s infinite
-              pulse;
+            animation: 1.5s cubic-bezier(0.76, 0, 0.55, 0.75) 0.5s infinite pulse;
 
             @keyframes pulse {
               from {
                 transform: scale(1);
                 opacity: 1;
               }
+
               to {
                 transform: scale(1.5);
                 opacity: 0;
