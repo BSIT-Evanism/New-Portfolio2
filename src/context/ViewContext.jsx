@@ -24,7 +24,7 @@ export function useHoverUpdate() {
 
 export default function ViewContext({ children }) {
   const [inView, setInView] = useState(false);
-  const [hover, setHover] = useState(false);
+  const [hover, setHover] = useState("");
 
   return (
     <InViewContext.Provider value={inView}>

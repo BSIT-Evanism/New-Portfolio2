@@ -26,8 +26,8 @@ export default function AnimatedLogo() {
     <>
       <motion.div
         layoutId="mainlogo"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
+        onMouseEnter={() => setHover("logo")}
+        onMouseLeave={() => setHover("")}
       >
         <div className={styles.logoContainer}>
           <AnimatePresence>

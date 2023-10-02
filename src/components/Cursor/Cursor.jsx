@@ -22,14 +22,21 @@ export default function Cursor() {
             animate={{ scale: size, opacity: hover ? 0.5 : 0.8 }}
           ></motion.div>
         </AnimatePresence>
-        {hover && (
+        {hover === "logo" ? (
           <motion.div
-            className={styles.cursor}
+            className={styles.cursorSecondary}
             style={{ x: mousePosition.x, y: mousePosition.y }}
             animate={{ scale: sizeVar }}
             transition={{ type: "tween", ease: "backOut" }}
           ></motion.div>
-        )}
+        ) : hover === "projects" || hover === "about" || hover === "FAQ" ? (
+          <motion.div
+            className={styles.cursorThird}
+            style={{ x: mousePosition.x, y: mousePosition.y }}
+            animate={{ scale: sizeVar }}
+            transition={{ type: "tween", ease: "backOut" }}
+          ><p className={styles.label}>{hover}</p></motion.div>
+        ) : null}
       </motion.div>
     </>
   );
