@@ -50,13 +50,15 @@ function Home() {
           </div>
         </div>
         <IntroSection>
-          <Marquee handleChange={handleChange} routeName="home">
-            Welcome to my Portfolio - I am a developer without fear on using
-            future tech to achieve anything Welcome to my Portfolio - I am a
-            developer without fear on using future tech to achieve anything
-            Welcome to my Portfolio - I am a developer without fear on using
-            future tech to achieve anything
-          </Marquee>
+          <div className={styles.introWrapper}>
+            <Marquee handleChange={handleChange} routeName="home">
+              Welcome to my Portfolio - I am a developer without fear on using
+              future tech to achieve anything Welcome to my Portfolio - I am a
+              developer without fear on using future tech to achieve anything
+              Welcome to my Portfolio - I am a developer without fear on using
+              future tech to achieve anything
+            </Marquee>
+          </div>
         </IntroSection>
         <div className={styles.test}></div>
         test scroll
