@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./HeroSection.module.scss";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import useMousePosition from "../../utils/useMousePosition.jsx";
+import { useScroll, useTransform } from "framer-motion";
 
 function HeroSection() {
   const [hover, setHover] = useState(false);
@@ -12,6 +13,9 @@ function HeroSection() {
     x: useMotionValue(0),
     y: useMotionValue(0),
   };
+
+  const { scrollYProgress } = useScroll()
+  const scalePos = useTransform(scrollYProgress, [0, 1], [1, 0.2])
 
   const xSpring = useSpring(heroTilt.x);
   const ySpring = useSpring(heroTilt.y);
@@ -48,6 +52,7 @@ function HeroSection() {
         className={styles.wrapper}
         initial={{ y: -300 }}
         animate={{ y: 0 }}
+        style={{ scale: scalePos }}
         onMouseEnter={() => setTilt(true)}
         onMouseLeave={() => setTilt(false)}
         transition={{ duration: 1.5, type: "spring", delay: 0.8 }}
@@ -56,7 +61,7 @@ function HeroSection() {
           className={styles.hero}
           style={{ rotateX: xSpring, rotateY: ySpring }}
 
-          // animate={{rotateX: mouseTilt.yDeg, rotateY: mouseTilt.xDeg}}
+        // animate={{rotateX: mouseTilt.yDeg, rotateY: mouseTilt.xDeg}}
         >
           <div className={styles.inner}>
             <div
@@ -82,7 +87,7 @@ function HeroSection() {
             </motion.div>
           </div>
         </motion.div>
-      </motion.div>
+      </motion.div >
     </>
   );
 }
