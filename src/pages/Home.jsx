@@ -37,13 +37,18 @@ function Home() {
         <AnimatePresence>
           <Navbar key={"home"} />
         </AnimatePresence>
-        <div className={styles.wrapper}>
-          <Link to="/">{!loader && <AnimatedLogo />}</Link>
-          <Carousel />
-          {/* <Trademark /> */}
-        </div>
         <NoticeBanner />
-        <HeroSection />
+        <div className={styles.herowrapper}>
+          <div className={styles.innerHero}>
+            <div className={styles.wrapper}>
+              <Link to="/">{!loader && <AnimatedLogo />}</Link>
+              <Carousel />
+              {/* <Trademark /> */}
+            </div>
+            <HeroSection />
+            <div className={styles.spacer}>spacer</div>
+          </div>
+        </div>
         <IntroSection>
           <Marquee handleChange={handleChange} routeName="home">
             Welcome to my Portfolio - I am a developer without fear on using

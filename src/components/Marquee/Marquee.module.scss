@@ -1,8 +1,8 @@
 .wrapper {
   width: 100vw;
   height: 25vh;
-  position: sticky;
   overflow: hidden;
+  position: relative;
   top: 3vh;
 }
 
@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
   background: white;
 }
@@ -33,16 +33,17 @@
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
   background: white;
 }
 
-.container{
+.container {
   display: flex;
   gap: 50px;
   overflow: hidden;
-  
+  background: white;
+
   p {
     overflow: hidden;
   }
@@ -51,18 +52,18 @@
 
 .marquee {
   border: 2px solid black;
-  border-left: 0 ;
-  border-right: 0 ;
+  border-left: 0;
+  border-right: 0;
   white-space: nowrap;
   overflow: hidden;
-  z-index: 3;
+  z-index: 10;
 }
 
 .child {
   display: flex;
   flex-direction: row;
-  
-  &:hover > h1 {
+
+  &:hover>h1 {
     color: blue;
   }
 }
@@ -83,4 +84,3 @@
 .text {
   color: #102C57;
 }
-

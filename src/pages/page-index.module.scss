@@ -48,3 +48,24 @@
   width: fit-content;
   position: relative;
 }
+
+.herowrapper {
+  height: 200vh;
+  width: 100vw;
+  margin-bottom: -100vh;
+  pointer-events: none;
+}
+
+.innerHero {
+  z-index: -1;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  pointer-events: all;
+  // background: red;
+}
+
+.spacer {
+  height: 100vh;
+  width: 100vw;
+}
